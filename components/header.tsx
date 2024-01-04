@@ -45,16 +45,16 @@ export const Header = ({ items, children }: MainNavProps) => {
     <header
       className="px-4 lg:px-6 h-16"
     >
-      <div className="hidden md:flex px-4 lg:px-6 h-16 justify-between items-center">
+      <div className="flex md:flex px-4 lg:px-6 h-16 justify-between items-center">
         <Link className="flex items-center justify-center" href="/">
           <Image src="/logo.svg" alt="logo" width="150" height="40" />
           <span className="sr-only">のんびりいこう</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/company">
             会社概要
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/business">
             事業内容
           </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
@@ -65,7 +65,7 @@ export const Header = ({ items, children }: MainNavProps) => {
           </Link> */}
         </nav>
       </div>
-      <div className="flex justify-between my-auto pt-2">
+      {/* <div className="flex justify-between my-auto pt-2">
         {showMobileMenu && items ? (
           <>
             <Link href="/" className="md:hidden">
@@ -77,7 +77,7 @@ export const Header = ({ items, children }: MainNavProps) => {
           </>
         ) :
           <>
-            {/* <Link href="/" className="md:hidden">{siteConfig.name}</Link> */}
+          
             <MobileNav items={items}>{children}</MobileNav>
             <Link href="/" className="md:hidden">
               <div className="flex items-center justify-center">
@@ -92,9 +92,9 @@ export const Header = ({ items, children }: MainNavProps) => {
           onClick={toggleMobileMenu}
         >
           {showMobileMenu ? <Icons.menu /> : <Icons.close />}
-          {/* <span className="font-bold">Menu</span> */}
+          
         </button>
-      </div>
+      </div> */}
     </header>
 
   )

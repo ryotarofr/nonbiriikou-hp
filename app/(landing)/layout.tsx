@@ -1,5 +1,7 @@
 
 // import { SiteFooter } from "@/components/layout/site-footer"
+import Footer from "@/components/footer"
+import { Header } from "@/components/header"
 import { Navbar } from "@/components/nabvar"
 import { landingConfig } from "@/config/landing"
 
@@ -20,8 +22,10 @@ export default async function LandingLayout({
       {/* <Suspense fallback="...">
         <Navbar items={landingConfig.mainNav} scroll={true} />
       </Suspense> */}
+      <Header items={landingConfig.mainNav} />
       <main className="flex-1">{children}</main>
       {/* <SiteFooter /> */}
+      <Footer />
     </div>
   )
 }
