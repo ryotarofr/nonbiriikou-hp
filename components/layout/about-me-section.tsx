@@ -11,13 +11,12 @@ export const AboutMeSection = () => {
     triggerOnce: true, // 一度だけトリガーする
   });
 
-  const [isVisible, setIsVisible] = useState(false);
+
   return (
     <div className="space-y-12 px-4 md:px-6">
       <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl text-center">私たちについて</h2>
       <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
         <Card
-          ref={ref}
           className={`
           
           relative overflow-hidden h-[200px]`}
@@ -39,7 +38,6 @@ export const AboutMeSection = () => {
           </CardContent>
         </Card>
         <Card
-          ref={ref}
           className={`
           
           relative overflow-hidden h-[200px]`}
@@ -60,7 +58,6 @@ export const AboutMeSection = () => {
           </CardContent>
         </Card>
         <Card
-          ref={ref}
           className={`
           
           relative overflow-hidden h-[200px]`}
