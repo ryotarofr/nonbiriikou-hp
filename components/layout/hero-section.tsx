@@ -7,7 +7,7 @@ export default function HeroSection() {
         alt="Person using HP device"
         className="absolute inset-0 object-cover w-full h-full"
         height="1800"
-        src="/image/image1-a.jpg"
+        src="/image/image2.jpg"
         // style={{
         //   aspectRatio: "1920/800",
         //   objectFit: "cover",

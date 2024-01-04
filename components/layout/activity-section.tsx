@@ -1,9 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 export const ActivitySection = () => {
   return (
-    <div>
+    <div className=" max-w-6xl mx-auto">
       <div className=" space-y-12 px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
@@ -13,7 +14,8 @@ export const ActivitySection = () => {
             </p>
           </div>
         </div>
-        <div className="ml-3 lg:ml-20">
+
+        <div className="">
           <div className="text-xl font-bold tracking-tighter sm:text-2xl">1.作業所内作業</div>
           <p className="text-gray-500 m-2">
             慣れた作業所内の作業です。各作業は細分化されており、自分の適性に合った作業から取り組みます。
@@ -72,7 +74,7 @@ export const ActivitySection = () => {
             </Link> */}
           </div>
         </div>
-        <div className="ml-3 lg:ml-20">
+        <div className="">
           <div className="text-xl font-bold tracking-tighter sm:text-2xl">2.作業所外作業</div>
           <p className="text-gray-500 m-2">
             事業所外の作業環境で体を動かす作業です。必要に応じて刈払機の資格も取得いただきます。
@@ -132,11 +134,11 @@ export const ActivitySection = () => {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto md:flex justify-around md:space-x-10 ">
+        <div className="md:flex justify-around md:space-x-10 ">
           <div className="my-10">
             <div className="text-xl font-bold tracking-tighter sm:text-2xl">3.模擬作業訓練メニュー</div>
             <p className="text-gray-500 m-2">
-              事業所外の作業環境で体を動かす作業です。必要に応じて刈払機の資格も取得いただきます。
+              手先を使う模擬的な作業訓練です。品質管理、時間管理をしながら実施します。
             </p>
             <div className="ml-4 mt-8 flex-col justify-center space-y-2">
               <li>ボルト組付作業訓練</li>
@@ -150,8 +152,88 @@ export const ActivitySection = () => {
           <div className="my-10">
             <div className="text-xl font-bold tracking-tighter sm:text-2xl">4.ワーク作業メニュー</div>
             <p className="text-gray-500 m-2">
-              事業所外の作業環境で体を動かす作業です。必要に応じて刈払機の資格も取得いただきます。
+              7種類のワークを正確性、スピード、集中力、器用さ、忍耐力をスコア評価するものです。
             </p>
+            <div className="ml-4 mt-8 flex-col justify-center space-y-2">
+              <li>ワッシャー積上げ作業</li>
+              <li>ビーズ並べ作業</li>
+              <li>ブロック照合作業</li>
+              <li>ブロック積上げ作業</li>
+              <li>点結び作業</li>
+              <li>図形カット作業</li>
+              <li>計算探ぴ</li>
+            </div>
+          </div>
+        </div>
+        <div className="">
+          <div className="">
+            <div className="text-xl my-10 font-bold tracking-tighter sm:text-2xl">5.その他の活動</div>
+            <p className="text-gray-500 m-2">
+              第1・第3土曜に実施！！！
+            </p>
+          </div>
+          <div className="w-full  md:flex justify-center">
+            <ScrollArea className="h-72 w-full max-w-sm rounded-md border">
+              <div className="p-4 text-sm">
+                <h4 className="mb-4 text-lg font-medium leading-none">グローイングセミナー</h4>
+                <ul className="list-disc list-inside mt-4 leading-7">
+                  <li>ビジネスマナーの基本</li>
+                  <li>アンガーマネジメント</li>
+                  <li>アサーション</li>
+                  <li>自己紹介セミナー</li>
+                  <li>褒めるセミナー</li>
+                  <li>仕事の朝を整える</li>
+                  <li>金銭管理セミナー</li>
+                  <li>SNS利用について</li>
+                  <li>品質管理について</li>
+                  <li>みんな違ってみんないい</li>
+                  <li>人から好かれるとは？</li>
+                  <li>目標について</li>
+                  <li>その夢は叶う！</li>
+                  <li>プライベートを充実させよう</li>
+                  <li>利用者さんセミナー などなど</li>
+                </ul>
+              </div>
+            </ScrollArea>
+            <ScrollArea className="h-72 w-full max-w-sm rounded-md border">
+              <div className="p-4 text-sm">
+                <h4 className="mb-4 text-lg font-medium leading-none">調理実習 & EAT体験</h4>
+                <ul className="list-disc list-inside mt-4 leading-7">
+                  <li>わんぱくカレー</li>
+                  <li>豚丼</li>
+                  <li>マーボー丼</li>
+                  <li>ビーフシチュー</li>
+                  <li>ホワイトシチュー</li>
+                  <li>瓦そば</li>
+                  <li>ミートスパゲッティ</li>
+                  <li>冷やしぶっかけうどん</li>
+                  <li>餃子定食</li>
+                  <li>肉じゃが定食</li>
+                  <li>豚茄子定食</li>
+                  <li>おむすび定食</li>
+                  <li>ホットドッグ</li>
+                  <li>焼きそばパン</li>
+                  <li>肉野菜炒め定食</li>
+                  <li>中華丼</li>
+                  <li>焼きビーフン</li>
+                  <li>ポトフ</li>
+                  <li>ホットケーキ などなど</li>
+                </ul>
+              </div>
+            </ScrollArea>
+            <ScrollArea className="h-72 w-full max-w-sm rounded-md border">
+              <div className="p-4 text-sm">
+                <h4 className="mb-4 text-lg font-medium leading-none">季節イベント</h4>
+                <ul className="mt-4 leading-7">
+                  <li>◯ 2月 節分行事</li>
+                  <li>◯ 3月 バレンタインデー</li>
+                  <li>◯ 4月 利用感謝祭(BBQ)</li>
+                  <li>◯ 7月 七夕</li>
+                  <li>◯ 11月 創立記念</li>
+                  <li>◯ 12月 クリスマス会</li>
+                </ul>
+              </div>
+            </ScrollArea>
           </div>
         </div>
       </div>
@@ -159,3 +241,5 @@ export const ActivitySection = () => {
 
   )
 }
+
+
