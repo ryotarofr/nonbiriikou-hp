@@ -13,7 +13,7 @@ import { MainNavItem } from "@/types"
 import { MobileNav } from "./mobile-nav"
 
 interface MainNavProps {
-  items?: MainNavItem[]
+  items: MainNavItem[]
   children?: React.ReactNode
 }
 

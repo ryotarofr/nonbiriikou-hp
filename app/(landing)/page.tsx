@@ -1,50 +1,110 @@
 import Image from "next/image"
 import Link from "next/link"
 import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card"
+import HeroSection from "@/components/layout/hero-section"
+import MemberSection from "@/components/layout/member-section"
+import Footer from "@/components/footer"
+import { Header } from "@/components/header"
+import { landingConfig } from "@/config/landing"
+
 
 export default function IndexPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-16 flex items-center">
-        <Link className="flex items-center justify-center" href="">
-          <Image src="/logo.svg" alt="logo" width="200" height="40" />
-          <span className="sr-only">のんびりいこう</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Home
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            About
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Services
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Contact
-          </Link>
-        </nav>
-      </header>
+      <Header items={landingConfig.mainNav} />
       <main className="flex-1">
-        <section className="w-full pt-12 md:pt-24 lg:pt-32 border-y">
+        <section>
+          <HeroSection />
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="space-y-12 px-4 md:px-6">
+            <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl text-center">私たちについて</h2>
+            <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
+              <Card className="relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent via-orange-500 transform -rotate-12" />
+                {/* <Image
+                  src="/image/image1.jpg"
+                  alt="logo"
+                  width="400"
+                  height="40"
+                  className="absolute object-cover"
+                /> */}
+                <CardContent className="p-6 relative">
+                  <h2 className="text-xl text-center font-bold mb-2">会社概要</h2>
+                  <p className="text-gray-600 text-center">company</p>
+                  {/* <Button className="mt-4">Learn More</Button> */}
+                </CardContent>
+              </Card>
+              <Card className="relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent via-green-500 transform -rotate-12" />
+                {/* <Image
+                  src="/image/image1.jpg"
+                  alt="logo"
+                  width="400"
+                  height="40"
+                  className="absolute object-cover"
+                /> */}
+                <CardContent className="p-6 relative">
+                  <h2 className="text-xl text-center font-bold mb-2">事業内容</h2>
+                  <p className="text-gray-600 text-center">services</p>
+                  {/* <Button className="mt-4">Learn More</Button> */}
+                </CardContent>
+              </Card>
+              <Card className="relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent via-sky-500 transform -rotate-12" />
+                {/* <Image
+                  src="/image/image1.jpg"
+                  alt="logo"
+                  width="400"
+                  height="40"
+                  className="absolute object-cover"
+                /> */}
+                <CardContent className="p-6 relative">
+                  <h2 className="text-xl text-center font-bold mb-2">活動内容</h2>
+                  <p className="text-gray-600 text-center">activities</p>
+                  {/* <Button className="mt-4">Learn More</Button> */}
+                </CardContent>
+              </Card>
+              {/* <Card className="bg-[#369036]">
+                <CardHeader>
+                  <CardTitle className="text-gray-200">事業内容</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-300 dark:text-gray-400">services</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-[#277631]">
+                <CardHeader>
+                  <CardTitle className="text-gray-200">活動内容</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-300 dark:text-gray-400">activities</p>
+                </CardContent>
+              </Card> */}
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32 border-y">
           <div className="px-4 md:px-6 space-y-10 xl:space-y-16">
             <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16">
               <div className="w-full">
                 <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
-                  Welcome to Acme Inc
+                  就労継続支援B型事業
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  We provide high quality products and services.
+                <p className="mx-auto my-6 max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+                  作業や活動を通して、様々な発見や成長を感じていただき、それぞれの夢(小さくても)や目標を一緒に設定していくことで「昨日より今日、
+                  今日より明日」のさらなる成長や希望を楽しみながら焦らずに自分のペースで「<span className="text-green-600 font-bold">のんびり</span>」と進んでいくことを支援させていただきます。
+                  どのような働き方でも「働くことを通じて幸せになる！」を一緒に追求していきましょう！
                 </p>
                 <Link
                   className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
                   href="#"
                 >
-                  Learn More
+                  もっと見る
                 </Link>
               </div>
               <div>
-                <Image />
+                <Image src="/image/image1.jpg" alt="1" width="1000" height="800" />
                 {/* <img
                   alt="Hero"
                   className="mx-auto aspect-[1/1] overflow-hidden rounded-xl object-cover"
@@ -56,39 +116,13 @@ export default function IndexPage() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container space-y-12 px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center">Featured Content</h2>
-            <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Feature 1</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Description of feature 1.</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Feature 2</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Description of feature 2.</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Feature 3</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Description of feature 3.</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+        <section>
+          <MemberSection />
+          {/* <Test /> */}
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+      <Footer />
+      {/* <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-gray-500 dark:text-gray-400">© Acme Inc. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4" href="#">
@@ -106,7 +140,7 @@ export default function IndexPage() {
           <FacebookIcon className="h-6 w-6" />
           <InstagramIcon className="h-6 w-6" />
         </div>
-      </footer>
+      </footer> */}
     </div>
   )
 }

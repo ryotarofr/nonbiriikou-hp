@@ -15,7 +15,7 @@ interface MobileNavProps {
 }
 
 export function MobileNav({ items, children }: MobileNavProps) {
-  useLockBody()
+  // useLockBody()
 
   return (
     <div
