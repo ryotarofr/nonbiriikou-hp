@@ -1,6 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { SimulationExercise } from "../ActivitySection/simulation-exercise"
+import { WorkMenu } from "../ActivitySection/work-menu"
 
 export const ActivitySection = () => {
   return (
@@ -135,35 +137,8 @@ export const ActivitySection = () => {
         </div>
 
         <div className="md:flex justify-around md:space-x-10 ">
-          <div className="my-10">
-            <div className="text-xl font-bold tracking-tighter sm:text-2xl">3.模擬作業訓練メニュー</div>
-            <p className="text-gray-500 m-2">
-              手先を使う模擬的な作業訓練です。品質管理、時間管理をしながら実施します。
-            </p>
-            <div className="ml-4 mt-8 flex-col justify-center space-y-2">
-              <li>ボルト組付作業訓練</li>
-              <li>フック組付作業訓練</li>
-              <li>ジョイント部品組付訓練</li>
-              <li>部品袋詰め作業訓練</li>
-              <li>クリップ選別作業訓練</li>
-              <li>ボタン選び作業訓練</li>
-            </div>
-          </div>
-          <div className="my-10">
-            <div className="text-xl font-bold tracking-tighter sm:text-2xl">4.ワーク作業メニュー</div>
-            <p className="text-gray-500 m-2">
-              7種類のワークを正確性、スピード、集中力、器用さ、忍耐力をスコア評価するものです。
-            </p>
-            <div className="ml-4 mt-8 flex-col justify-center space-y-2">
-              <li>ワッシャー積上げ作業</li>
-              <li>ビーズ並べ作業</li>
-              <li>ブロック照合作業</li>
-              <li>ブロック積上げ作業</li>
-              <li>点結び作業</li>
-              <li>図形カット作業</li>
-              <li>計算探ぴ</li>
-            </div>
-          </div>
+          <SimulationExercise />
+          <WorkMenu />
         </div>
         <div className="">
           <div className="">
@@ -176,7 +151,7 @@ export const ActivitySection = () => {
             <ScrollArea className="h-72 w-full max-w-sm rounded-md border">
               <div className="p-4 text-sm">
                 <h4 className="mb-4 text-lg font-medium leading-none">グローイングセミナー</h4>
-                <ul className="list-disc list-inside mt-4 leading-7">
+                <ul className="mt-4 leading-7">
                   <li>ビジネスマナーの基本</li>
                   <li>アンガーマネジメント</li>
                   <li>アサーション</li>
@@ -198,7 +173,7 @@ export const ActivitySection = () => {
             <ScrollArea className="h-72 w-full max-w-sm rounded-md border">
               <div className="p-4 text-sm">
                 <h4 className="mb-4 text-lg font-medium leading-none">調理実習 & EAT体験</h4>
-                <ul className="list-disc list-inside mt-4 leading-7">
+                <ul className="mt-4 leading-7">
                   <li>わんぱくカレー</li>
                   <li>豚丼</li>
                   <li>マーボー丼</li>
