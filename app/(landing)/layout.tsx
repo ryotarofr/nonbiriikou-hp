@@ -17,9 +17,9 @@ export default async function LandingLayout({
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Suspense fallback="...">
+      {/* <Suspense fallback="...">
         <Navbar items={landingConfig.mainNav} scroll={true} />
-      </Suspense>
+      </Suspense> */}
       <main className="flex-1">{children}</main>
       {/* <SiteFooter /> */}
     </div>

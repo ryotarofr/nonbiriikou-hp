@@ -76,12 +76,29 @@ export function MainNav({ items, children }: MainNavProps) {
       </button>
       {showMobileMenu && items ? (
         <>
+          {/* <MobileNav items={items}>{children}</MobileNav>
+          <Link href="/" className="md:hidden"><Link className="flex items-center justify-center" href="">
+            <Image src="/logo.svg" alt="logo" width="200" height="40" />
+            <span className="sr-only">のんびりいこう</span>
+          </Link></Link> */}
           <MobileNav items={items}>{children}</MobileNav>
-          <Link href="/" className="md:hidden">{siteConfig.name}</Link>
+          <Link href="/" className="md:hidden">
+            <div className="flex items-center justify-center">
+              <Image src="/logo.svg" alt="logo" width="200" height="40" />
+              <span className="sr-only">のんびりいこう</span>
+            </div>
+          </Link>
         </>
       ) :
         <>
           <Link href="/" className="md:hidden">{siteConfig.name}</Link>
+          <MobileNav items={items}>{children}</MobileNav>
+          <Link href="/" className="md:hidden">
+            <div className="flex items-center justify-center">
+              <Image src="/logo.svg" alt="logo" width="200" height="40" />
+              <span className="sr-only">のんびりいこう</span>
+            </div>
+          </Link>
         </>
       }
     </div>
