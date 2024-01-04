@@ -74,9 +74,11 @@ export default function Footer() {
         </div>
         <div className="text-sm">© LLC Tito Group. All rights reserved.</div>
         <div className="mt-4 md:mt-0">
-          <Button className="text-sm" variant="ghost">
-            Back to Top
-          </Button>
+          <Link href="#">
+            <Button className="text-sm" variant="ghost">
+              Back to Top
+            </Button>
+          </Link>
         </div>
       </div>
     </footer>

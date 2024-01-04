@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card"
@@ -6,9 +8,26 @@ import MemberSection from "@/components/layout/member-section"
 import Footer from "@/components/footer"
 import { Header } from "@/components/header"
 import { landingConfig } from "@/config/landing"
-
+import { useEffect, useState } from "react"
+import { useInView } from 'react-intersection-observer';
+import "./style.css"
+import { ActivitySection } from "@/components/layout/activity-section"
 
 export default function IndexPage() {
+  const [ref, inView] = useInView({
+    triggerOnce: true, // 一度だけトリガーする
+  });
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (inView) {
+      // 要素が画面に表示されたらアニメーションを開始
+      setIsVisible(true);
+    }
+  }, [inView]);
+
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header items={landingConfig.mainNav} />
@@ -20,45 +39,58 @@ export default function IndexPage() {
           <div className="space-y-12 px-4 md:px-6">
             <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl text-center">私たちについて</h2>
             <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
-              <Card className="relative overflow-hidden">
+              <Card
+                ref={ref}
+                className={`fade-in ${isVisible ? 'active' : ''} relative overflow-hidden h-[200px]`}
+              // className="relative overflow-hidden"
+              >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent via-orange-500 transform -rotate-12" />
-                {/* <Image
-                  src="/image/image1.jpg"
+                <Image
+                  src="/image/placeholder.svg"
                   alt="logo"
                   width="400"
                   height="40"
                   className="absolute object-cover"
-                /> */}
-                <CardContent className="p-6 relative">
+                />
+                <CardContent
+                  className="p-6 relative">
                   <h2 className="text-xl text-center font-bold mb-2">会社概要</h2>
                   <p className="text-gray-600 text-center">company</p>
                   {/* <Button className="mt-4">Learn More</Button> */}
                 </CardContent>
               </Card>
-              <Card className="relative overflow-hidden">
+              <Card
+                ref={ref}
+                className={`fade-in2 ${isVisible ? 'active' : ''} relative overflow-hidden h-[200px]`}
+              // className="relative overflow-hidden"
+              >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent via-green-500 transform -rotate-12" />
-                {/* <Image
-                  src="/image/image1.jpg"
+                <Image
+                  src="/image/placeholder.svg"
                   alt="logo"
                   width="400"
                   height="40"
                   className="absolute object-cover"
-                /> */}
+                />
                 <CardContent className="p-6 relative">
                   <h2 className="text-xl text-center font-bold mb-2">事業内容</h2>
                   <p className="text-gray-600 text-center">services</p>
                   {/* <Button className="mt-4">Learn More</Button> */}
                 </CardContent>
               </Card>
-              <Card className="relative overflow-hidden">
+              <Card
+                ref={ref}
+                className={`fade-in3 ${isVisible ? 'active' : ''} relative overflow-hidden h-[200px]`}
+              // className="relative overflow-hidden"
+              >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent via-sky-500 transform -rotate-12" />
-                {/* <Image
-                  src="/image/image1.jpg"
+                <Image
+                  src="/image/placeholder.svg"
                   alt="logo"
                   width="400"
                   height="40"
                   className="absolute object-cover"
-                /> */}
+                />
                 <CardContent className="p-6 relative">
                   <h2 className="text-xl text-center font-bold mb-2">活動内容</h2>
                   <p className="text-gray-600 text-center">activities</p>
@@ -104,7 +136,7 @@ export default function IndexPage() {
                 </Link>
               </div>
               <div>
-                <Image src="/image/image1.jpg" alt="1" width="1000" height="800" />
+                <Image src="/image/image1.jpg" alt="1" width="1000" height="800" className=" rounded-lg" />
                 {/* <img
                   alt="Hero"
                   className="mx-auto aspect-[1/1] overflow-hidden rounded-xl object-cover"
@@ -116,7 +148,10 @@ export default function IndexPage() {
             </div>
           </div>
         </section>
-        <section>
+        <section className="w-full py-12 md:py-24 lg:py-32 border-b">
+          <ActivitySection />
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32">
           <MemberSection />
           {/* <Test /> */}
         </section>
