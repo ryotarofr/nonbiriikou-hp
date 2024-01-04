@@ -18,7 +18,9 @@ export const AboutMeSection = () => {
       <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
         <Card
           ref={ref}
-          className={`fade-in ${isVisible ? 'active' : ''} relative overflow-hidden h-[200px]`}
+          className={`
+          
+          relative overflow-hidden h-[200px]`}
         // className="relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent via-orange-500 transform -rotate-12" />
@@ -38,7 +40,9 @@ export const AboutMeSection = () => {
         </Card>
         <Card
           ref={ref}
-          className={`fade-in2 ${isVisible ? 'active' : ''} relative overflow-hidden h-[200px]`}
+          className={`
+          
+          relative overflow-hidden h-[200px]`}
         // className="relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent via-green-500 transform -rotate-12" />
@@ -57,7 +61,9 @@ export const AboutMeSection = () => {
         </Card>
         <Card
           ref={ref}
-          className={`fade-in3 ${isVisible ? 'active' : ''} relative overflow-hidden h-[200px]`}
+          className={`
+          
+          relative overflow-hidden h-[200px]`}
         // className="relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent via-sky-500 transform -rotate-12" />
