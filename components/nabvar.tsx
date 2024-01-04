@@ -14,7 +14,7 @@ import { MainNav } from "./main-nav";
 
 interface NavBarProps {
   // user: Pick<User, "name" | "image" | "email"> | undefined
-  items?: MainNavItem[]
+  items: MainNavItem[]
   children?: React.ReactNode
   rightElements?: React.ReactNode
   scroll?: boolean
