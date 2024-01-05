@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { SimulationExercise } from "../ActivitySection/simulation-exercise"
 import { WorkMenu } from "../ActivitySection/work-menu"

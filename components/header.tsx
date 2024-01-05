@@ -57,7 +57,7 @@ export const Header = ({ items, children }: MainNavProps) => {
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="/business">
             事業内容
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#activity">
             活動内容
           </Link>
           {/* <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">

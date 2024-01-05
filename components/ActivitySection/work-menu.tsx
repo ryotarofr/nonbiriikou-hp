@@ -81,7 +81,7 @@ export const WorkMenu = () => {
             className={`${selectNumber === 7 ? 'bg-green-50 shadow-md' : ''} rounded-md pl-2 py-2`}
             onClick={handleClick7}
           >
-            計算探ぴ</li>
+            計算</li>
         </ul>
         <Image src={selectImage} alt="workImage" width={400} height={200} className="rounded-lg" />
       </div>

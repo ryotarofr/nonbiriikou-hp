@@ -67,12 +67,19 @@ export default function IndexPage() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 border-b">
+        <section className="w-full py-12 md:py-24 lg:py-32" id="activity">
           <ActivitySection />
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-12 md:py-24 lg:py-32 border-y">
+          <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">利用者の声</h2>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32 border-b">
           <MemberSection />
           {/* <Test /> */}
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          {/* map */}
+          <div className="text-center">google map ここに表示</div>
         </section>
       </main>
       {/* <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
