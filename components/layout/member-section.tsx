@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import { Card } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Car, Fish, FlameKindling, Guitar, Shrub } from 'lucide-react'
 
 function CarouselDemo() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
@@ -177,7 +178,7 @@ const slides = [
 
 function Member1() {
   return (
-    <Card className="items-center p-6 overflow-hidden">
+    <Card className="items-center p-3 overflow-hidden bg-green-500/30">
       <Tabs defaultValue="heart" className="mx-auto">
         <div className='flex flex-col items-center p-6 space-y-4'>
           <Avatar className="w-36 h-36">
@@ -192,23 +193,23 @@ function Member1() {
           <TabsTrigger value="message" className='font-bold'>これから利用いただく方へのメッセージ</TabsTrigger>
           <TabsTrigger value="hobby" className='font-bold'>趣味・好きなこと</TabsTrigger>
         </TabsList>
-        <TabsContent value="heart" className=''>
+        <TabsContent value="heart" className='bg-white/70 p-3'>
           『人生一回ポッキリ・・・』どのような働き方をしても、どのように日々を過ごしても、同じように時間は過ぎていきます。
           であるならば、自分たちが考えを具体化できるような、どこにもない『心から楽しい福祉サービス』を追求し、サービスを受けて
           いただく利用者様(ご家族)、サービスを提供する職員、共に楽しく成長し幸せになれるような会社にしたいと心から思います。
         </TabsContent>
-        <TabsContent value="message">
+        <TabsContent value="message" className='bg-white/70 p-3'>
           仕事(作業)や活動、イベント、日常のコミュニケーションなどをと通して『自分らしさ』を発見していただき、自分の夢や目標
           に希望が持てるように・・・！そして、そのきっかけづくりが&quot;のんびりいこう&quot;でできるといいな・・・と思っています！他の人
           と比較することなく、自分のペースで&quot;のんびり&quot;と・・・。素敵な自分発見を我々と一緒に倒しみましょう！！
         </TabsContent>
-        <TabsContent value="hobby" className='ml-4 sm:ml-10 md:ml-20'>
-          <ul className=' list-disc'>
-            <li>キャンプ</li>
-            <li>魚釣り</li>
-            <li>楽器演奏(ベースギター)</li>
-            <li>ドライブ</li>
-            <li>草いじり</li>
+        <TabsContent value="hobby" className='pl-4 sm:pl-10 md:pl-20 bg-white/70'>
+          <ul className='grid grid-cols-2 md:grid-cols-3 h-[160px] items-center'>
+            <li className='flex space-x-2 items-center'><FlameKindling /><p>キャンプ</p></li>
+            <li className='flex space-x-2 items-center'><Fish /><p>魚釣り</p></li>
+            <li className='flex space-x-2 items-center'><Guitar /><p>楽器演奏(ベースギター)</p></li>
+            <li className='flex space-x-2 items-center'><Car /><p>ドライブ</p></li>
+            <li className='flex space-x-2 items-center'><Shrub /><p>草いじり</p></li>
           </ul>
         </TabsContent>
       </Tabs>

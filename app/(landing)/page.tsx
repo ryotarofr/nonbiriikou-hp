@@ -10,6 +10,9 @@ import { useInView } from 'react-intersection-observer';
 import "./style.css"
 import { ActivitySection } from "@/components/layout/activity-section"
 import { AboutMeSection } from "@/components/layout/about-me-section"
+import Test from "@/components/layout/test"
+import { UsersVoices } from "@/components/layout/users-voices-section"
+import { Faq } from "@/components/layout/faq"
 
 export default function IndexPage() {
   const [ref, inView] = useInView({
@@ -29,10 +32,13 @@ export default function IndexPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
+        {/* <section className="h-[90vh]"> */}
+        {/* <Test /> */}
+        {/* </section> */}
         <section>
           <HeroSection />
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-12 md:py-24 lg:py-32" id="about">
           <AboutMeSection />
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 border-y">
@@ -48,8 +54,8 @@ export default function IndexPage() {
                   どのような働き方でも「働くことを通じて幸せになる！」を一緒に追求していきましょう！
                 </p>
                 <Link
-                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                  href="#"
+                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-6 py-4 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                  href="/support"
                 >
                   もっと見る
                 </Link>
@@ -71,36 +77,21 @@ export default function IndexPage() {
           <ActivitySection />
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 border-y">
-          <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">利用者の声</h2>
+          <UsersVoices />
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 border-b">
           <MemberSection />
-          {/* <Test /> */}
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          {/* map */}
+        {/* <section className="w-full py-12 md:py-24 lg:py-32 border-y">
+
           <div className="text-center">google map ここに表示</div>
+        </section> */}
+        <section className="w-full py-12 md:py-24 lg:pb-32">
+          <div className="">
+            <Faq />
+          </div>
         </section>
       </main>
-      {/* <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500 dark:text-gray-400">© Acme Inc. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Terms of Service
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Privacy
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Contact
-          </Link>
-        </nav>
-        <div className="flex gap-4">
-          <TwitterIcon className="h-6 w-6" />
-          <FacebookIcon className="h-6 w-6" />
-          <InstagramIcon className="h-6 w-6" />
-        </div>
-      </footer> */}
     </div>
   )
 }
