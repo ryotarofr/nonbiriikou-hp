@@ -178,7 +178,7 @@ const slides = [
 
 function Member1() {
   return (
-    <Card className="items-center p-3 overflow-hidden bg-green-500/30">
+    <Card className="items-center p-3 overflow-hidden ">
       <Tabs defaultValue="heart" className="mx-auto">
         <div className='flex flex-col items-center p-6 space-y-4'>
           <Avatar className="w-36 h-36">
@@ -203,7 +203,7 @@ function Member1() {
           に希望が持てるように・・・！そして、そのきっかけづくりが&quot;のんびりいこう&quot;でできるといいな・・・と思っています！他の人
           と比較することなく、自分のペースで&quot;のんびり&quot;と・・・。素敵な自分発見を我々と一緒に倒しみましょう！！
         </TabsContent>
-        <TabsContent value="hobby" className='pl-4 sm:pl-10 md:pl-20 bg-white/70'>
+        <TabsContent value="hobby" className='pl-4 sm:pl-10 md:pl-20'>
           <ul className='grid grid-cols-2 md:grid-cols-3 h-[160px] items-center'>
             <li className='flex space-x-2 items-center'><FlameKindling /><p>キャンプ</p></li>
             <li className='flex space-x-2 items-center'><Fish /><p>魚釣り</p></li>
