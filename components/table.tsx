@@ -54,10 +54,6 @@ const programs: Program[] = [
     time: '15:00 ~',
     program: '終礼・送迎',
   },
-  {
-    time: '10:00 ~ 10:10',
-    program: 'ストレッチ体操・朝礼',
-  },
 ];
 
 const programs2: Program[] = [

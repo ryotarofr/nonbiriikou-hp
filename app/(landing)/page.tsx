@@ -86,10 +86,10 @@ export default function IndexPage() {
 
           <div className="text-center">google map ここに表示</div>
         </section> */}
-        <section className="w-full py-12 md:py-24 lg:pb-32">
-          <div className="">
-            <Faq />
-          </div>
+        <section className="w-full py-12 md:py-24 lg:pb-20 px-3">
+          {/* <div className="flex w-full flex-col gap-16 py-8 md:py-8"> */}
+          <Faq />
+          {/* </div> */}
         </section>
       </main>
     </div>

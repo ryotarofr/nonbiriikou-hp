@@ -5,22 +5,22 @@ export default function CompanyPage() {
         <section className="px-6 py-12 bg-gray-50" id="about">
           <div className="max-w-3xl mx-auto space-y-4">
             <h2 className="text-2xl font-bold">会社概要</h2>
-            <div className="flex md:space-x-14">
-              <div className="space-y-4 text-gray-600">
-                <div>法人名</div>
-                <div>所在地</div>
-                <div>連絡先</div>
-                <div>設立日</div>
-                <div>代表者</div>
-                <div>取引金融機関</div>
+            <div className="grid grid-cols-2 md:space-x-14">
+              <div className="text-gray-600">
+                <div className=" min-h-[60px] items-center">法人名</div>
+                <div className=" min-h-[60px] items-center">所在地</div>
+                <div className=" min-h-[60px] items-center">連絡先</div>
+                <div className=" min-h-[60px] items-center">設立日</div>
+                <div className=" min-h-[60px] items-center">代表者</div>
+                <div className=" min-h-[60px] items-center">取引金融機関</div>
               </div>
-              <div className="space-y-4 font-semibold">
-                <div>合同会社ティトグループ</div>
-                <div>山口県山口市秋穂二島1911番地</div>
-                <div>TEL 080-987-0987 FAX 083-987-1155</div>
-                <div>2021年11月1日</div>
-                <div>伊藤 卓芳</div>
-                <div>山口銀行</div>
+              <div className="font-semibold">
+                <div className=" min-h-[60px] items-center">合同会社ティトグループ</div>
+                <div className=" min-h-[60px] items-center">山口県山口市秋穂二島1911番地</div>
+                <div className=" min-h-[60px] items-center">TEL 083-987-0987 FAX 083-987-1155</div>
+                <div className=" min-h-[60px] items-center">2021年11月1日</div>
+                <div className=" min-h-[60px] items-center">伊藤 卓芳</div>
+                <div className=" min-h-[60px] items-center">山口銀行</div>
               </div>
             </div>
           </div>
@@ -28,7 +28,7 @@ export default function CompanyPage() {
         <section className="px-6 py-12" id="services">
           <div className="max-w-3xl mx-auto space-y-4">
             <h2 className="text-2xl font-bold">ティトグループ経営理念</h2>
-            <div>「関係するすべてのお客様と地域の幸せ。そして社員とその家族の幸せと絵がをを追求し続ける」</div>
+            <div>「関係するすべてのお客様と地域の幸せ。そして社員とその家族の幸せと笑顔を追求し続ける」</div>
           </div>
         </section>
         <section className="px-6 py-12 bg-gray-50" id="testimonials">
@@ -38,8 +38,8 @@ export default function CompanyPage() {
             <ul className=" space-y-4 font-semibold">
               <li>◯ 当たり前のことでも周囲に感謝できる謙虚さを大切にする</li>
               <li>◯ 真面目にコツコツ、正直で透明性のある事業活動を行う</li>
-              <li>◯ 明るく元気で健康にシドとを楽しむことができる風通しの良い組織と環境を大切にする</li>
-              <li>◯ プロトしての専門知識の蓄積と知識をスキルに変換するためのアウトプットを常に実現する</li>
+              <li>◯ 明るく元気で健康に仕事とを楽しむことができる風通しの良い組織と環境を大切にする</li>
+              <li>◯ プロとしての専門知識の蓄積と知識をスキルに変換するためのアウトプットを常に実現する</li>
               <li>◯ プラスアルファ(ひと手間)を惜しまずに当たり前にできる人材を育てる</li>
               <li>◯ 自然と助け合える優しさと配慮を大切にして強い組織を作る</li>
               <li>◯ 創造的なアイデアの創出とそれを実現する組織を作る</li>

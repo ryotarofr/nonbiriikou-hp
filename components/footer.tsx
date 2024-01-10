@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="bg-gray-800 text-white py-10 px-5 md:px-10">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div>
-          <h3 className="text-lg font-semibold mb-3">のんびりいこう</h3>
+          <h3 className="text-lg font-semibold mb-3">合同会社ティトグループ</h3>
           <ul className="space-y-2 text-sm">
             <li>
               <Link className="hover:underline" href="#">

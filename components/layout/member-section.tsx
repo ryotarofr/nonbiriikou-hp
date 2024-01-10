@@ -178,7 +178,7 @@ const slides = [
 
 function Member1() {
   return (
-    <Card className="items-center p-3 overflow-hidden ">
+    <Card className="items-center p-3 overflow-hidden">
       <Tabs defaultValue="heart" className="mx-auto">
         <div className='flex flex-col items-center p-6 space-y-4'>
           <Avatar className="w-36 h-36">
@@ -195,7 +195,7 @@ function Member1() {
         </TabsList>
         <TabsContent value="heart" className='bg-white/70 p-3'>
           『人生一回ポッキリ・・・』どのような働き方をしても、どのように日々を過ごしても、同じように時間は過ぎていきます。
-          であるならば、自分たちが考えを具体化できるような、どこにもない『心から楽しい福祉サービス』を追求し、サービスを受けて
+          であるならば、自分たちが考えを具体化できるような、どこにもない『心ある楽しい福祉サービス』を追求し、サービスを受けて
           いただく利用者様(ご家族)、サービスを提供する職員、共に楽しく成長し幸せになれるような会社にしたいと心から思います。
         </TabsContent>
         <TabsContent value="message" className='bg-white/70 p-3'>

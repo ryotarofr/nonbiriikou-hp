@@ -17,9 +17,9 @@ export const ActivitySection = () => {
         </div>
 
         <div className="">
-          <div className="text-xl font-bold tracking-tighter sm:text-2xl">1.作業所内作業</div>
+          <div className="text-xl font-bold tracking-tighter sm:text-2xl">1.施設内作業</div>
           <p className="text-gray-500 m-2">
-            慣れた作業所内の作業です。各作業は細分化されており、自分の適性に合った作業から取り組みます。
+            慣れた施設内の作業です。各作業は細分化されており、自分の適性に合った作業から取り組みます。
           </p>
         </div>
         <div className="mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
@@ -76,9 +76,9 @@ export const ActivitySection = () => {
           </div>
         </div>
         <div className="">
-          <div className="text-xl font-bold tracking-tighter sm:text-2xl">2.作業所外作業</div>
+          <div className="text-xl font-bold tracking-tighter sm:text-2xl">2.施設外作業</div>
           <p className="text-gray-500 m-2">
-            事業所外の作業環境で体を動かす作業です。必要に応じて刈払機の資格も取得いただきます。
+            施設外の作業環境で体を動かす作業です。必要に応じて刈払機の資格も取得いただきます。
           </p>
         </div>
         <div className="mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
