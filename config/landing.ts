@@ -5,24 +5,20 @@ import { LandingConfig } from "@/types";
 export const landingConfig: LandingConfig = {
   mainNav: [
     {
-      title: "撮影会スケジュール",
-      href: "/schedule",
+      title: "会社概要",
+      href: "/company",
     },
     {
-      title: "所属モデル紹介",
-      href: "/model",
+      title: "事業概要",
+      href: "/business",
     },
     {
-      title: "個撮申し込み",
-      href: "/personal",
+      title: "活動内容",
+      href: "/#activity",
     },
     {
-      title: "モデル募集",
-      href: "/recruit",
-    },
-    {
-      title: "出張撮影サービス",
-      href: "/photo",
+      title: "施設案内",
+      href: "/facilities ",
     },
   ],
 }

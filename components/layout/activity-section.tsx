@@ -28,7 +28,7 @@ export const ActivitySection = () => {
               alt="Activity Image"
               className="aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
               height="300"
-              src="/image/placeholder.svg"
+              src="/image/landing/IMG_2143.JPG"
               width="400"
             />
             <h3 className="text-lg font-bold">車部品の加工作業</h3>
@@ -45,7 +45,7 @@ export const ActivitySection = () => {
               alt="Activity Image"
               className="aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
               height="300"
-              src="/image/placeholder.svg"
+              src="/image/landing/IMG_2159.JPG"
               width="400"
             />
             <h3 className="text-lg font-bold">封入、封かん作業等 / 臨時請負内職作業</h3>
@@ -62,7 +62,7 @@ export const ActivitySection = () => {
               alt="Activity Image"
               className="aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
               height="300"
-              src="/image/placeholder.svg"
+              src="/image/landing/IMG_2151.JPG"
               width="400"
             />
             <h3 className="text-lg font-bold">段ボール資材料等の加工作業</h3>
@@ -87,7 +87,7 @@ export const ActivitySection = () => {
               alt="Activity Image"
               className="aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
               height="300"
-              src="/image/placeholder.svg"
+              src="/image/landing/washing-a.JPG"
               width="400"
             />
             <h3 className="text-lg font-bold">建物内清掃作業A社[月・木曜日]</h3>
@@ -104,10 +104,10 @@ export const ActivitySection = () => {
               alt="Activity Image"
               className="aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
               height="300"
-              src="/image/placeholder.svg"
+              src="/image/landing/washing-b.JPG"
               width="400"
             />
-            <h3 className="text-lg font-bold">建物内清掃作業A社B社[金曜日]</h3>
+            <h3 className="text-lg font-bold">建物内清掃作業B社[金曜日]</h3>
             {/* <p className="text-sm text-gray-500 dark:text-gray-400">This is a brief description of the activity.</p>
             <Link
               className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
@@ -121,7 +121,7 @@ export const ActivitySection = () => {
               alt="Activity Image"
               className="aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
               height="300"
-              src="/image/placeholder.svg"
+              src="/image/landing/grow-delete.JPG"
               width="400"
             />
             <h3 className="text-lg font-bold">管理畑の除草作業</h3>

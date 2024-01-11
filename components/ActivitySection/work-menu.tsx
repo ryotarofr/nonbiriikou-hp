@@ -4,7 +4,7 @@ import Image from "next/image"
 import { useState } from "react"
 
 export const WorkMenu = () => {
-  const [selectNumber, setSelectNumber] = useState(1)
+  const [selectNumber, setSelectNumber] = useState(10000000)
   const [selectImage, setSelectImage] = useState("/image/work/wassher.jpeg")
 
   const handleClick1 = () => {
@@ -45,45 +45,45 @@ export const WorkMenu = () => {
       <p className="text-gray-500 m-2">
         7種類のワークを正確性、スピード、集中力、器用さ、忍耐力をスコア評価するものです。
       </p>
-      <div className="grid grid-cols-2 items-center">
-        <ul className="ml-2 mt-8 flex-col justify-center">
+      <div className="md:grid md:grid-cols-2 items-center">
+        <ul className="ml-10 mt-8 flex-col justify-center list-disc">
           <li
-            className={`${selectNumber === 1 ? 'bg-green-50 shadow-md' : ''} rounded-md pl-2 py-2`}
-            onClick={handleClick1}
+            className={`${selectNumber === 1 ? 'bg-green-50 shadow-md' : ''} rounded-md py-2`}
+          // onClick={handleClick1}
           >
             ワッシャー積上げ作業</li>
           <li
-            className={`${selectNumber === 2 ? 'bg-green-50 shadow-md' : ''} rounded-md pl-2 py-2`}
-            onClick={handleClick2}
+            className={`${selectNumber === 2 ? 'bg-green-50 shadow-md' : ''} rounded-md py-2`}
+          // onClick={handleClick2}
           >
             ビーズ並べ作業</li>
           <li
-            className={`${selectNumber === 3 ? 'bg-green-50 shadow-md' : ''} rounded-md pl-2 py-2`}
-            onClick={handleClick3}
+            className={`${selectNumber === 3 ? 'bg-green-50 shadow-md' : ''} rounded-md py-2`}
+          // onClick={handleClick3}
           >
             ブロック照合作業</li>
           <li
-            className={`${selectNumber === 4 ? 'bg-green-50 shadow-md' : ''} rounded-md pl-2 py-2`}
-            onClick={handleClick4}
+            className={`${selectNumber === 4 ? 'bg-green-50 shadow-md' : ''} rounded-md py-2`}
+          // onClick={handleClick4}
           >
             ブロック積上げ作業</li>
           <li
-            className={`${selectNumber === 5 ? 'bg-green-50 shadow-md' : ''} rounded-md pl-2 py-2`}
-            onClick={handleClick5}
+            className={`${selectNumber === 5 ? 'bg-green-50 shadow-md' : ''} rounded-md py-2`}
+          // onClick={handleClick5}
           >
             点結び作業</li>
           <li
-            className={`${selectNumber === 6 ? 'bg-green-50 shadow-md' : ''} rounded-md pl-2 py-2`}
-            onClick={handleClick6}
+            className={`${selectNumber === 6 ? 'bg-green-50 shadow-md' : ''} rounded-md py-2`}
+          // onClick={handleClick6}
           >
             図形カット作業</li>
           <li
-            className={`${selectNumber === 7 ? 'bg-green-50 shadow-md' : ''} rounded-md pl-2 py-2`}
-            onClick={handleClick7}
+            className={`${selectNumber === 7 ? 'bg-green-50 shadow-md' : ''} rounded-md py-2`}
+          // onClick={handleClick7}
           >
             計算</li>
         </ul>
-        <Image src={selectImage} alt="workImage" width={400} height={200} className="rounded-lg" />
+        <Image src="/image/landing/work-sample.JPG" alt="workImage" width={400} height={200} className="rounded-lg hidden md:block" />
       </div>
     </div>
   )

@@ -5,7 +5,7 @@ import { SiteConfig } from "@/types";
 const site_url = env.NEXT_PUBLIC_APP_URL;
 
 export const siteConfig: SiteConfig = {
-  name: "ONE☆FLRASH",
+  name: "のんびりいこう",
   description:
     "",
   url: site_url,

@@ -16,7 +16,7 @@ export const AboutMeSection = () => {
   return (
     <div className="space-y-12 px-4 md:px-6">
       <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl text-center">私たちについて</h2>
-      <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
+      <div className="mx-auto grid items-start gap-8 sm:max-w-4xl grid-cols-1 sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
         <Link href="/company">
           <Card
             className={`
@@ -24,18 +24,20 @@ export const AboutMeSection = () => {
           relative overflow-hidden h-[200px]`}
           // className="relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent via-orange-500 transform -rotate-12" />
+            {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent via-orange-500 transform -rotate-12" /> */}
             <Image
-              src="/image/placeholder.svg"
+              src="/image/landing/IMG_1688.JPG"
               alt="logo"
               width="400"
               height="40"
-              className="absolute object-cover"
+              className="absolute object-cover w-full hover:opacity-70"
             />
             <CardContent
               className="p-6 relative">
-              <h2 className="text-xl text-center font-bold mb-2">会社概要</h2>
-              <p className="text-gray-600 text-center">company</p>
+              <div className="bg-white/60 pt-2 rounded-lg">
+                <h2 className="text-xl text-center font-bold mb-2">会社概要</h2>
+                <p className="text-gray-600 text-center">company</p>
+              </div>
               {/* <Button className="mt-4">Learn More</Button> */}
             </CardContent>
           </Card>
@@ -47,18 +49,20 @@ export const AboutMeSection = () => {
           relative overflow-hidden h-[200px]`}
           // className="relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent via-green-500 transform -rotate-12" />
+            {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent via-green-500 transform -rotate-12" /> */}
             <Image
-              src="/image/placeholder.svg"
+              src="/image/landing/IMG_1848.JPG"
               alt="logo"
               width="400"
               height="40"
-              className="absolute object-cover"
+              className="absolute object-cover w-full hover:opacity-70"
             />
             <CardContent className="p-6 relative">
-              <h2 className="text-xl text-center font-bold mb-2">事業内容</h2>
-              <p className="text-gray-600 text-center">services</p>
-              {/* <Button className="mt-4">Learn More</Button> */}
+              <div className="bg-white/60 pt-2 rounded-lg">
+                <h2 className="text-xl text-center font-bold mb-2">事業内容</h2>
+                <p className="text-gray-600 text-center">services</p>
+                {/* <Button className="mt-4">Learn More</Button> */}
+              </div>
             </CardContent>
           </Card>
         </Link>
@@ -69,18 +73,20 @@ export const AboutMeSection = () => {
           relative overflow-hidden h-[200px]`}
           // className="relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent via-sky-500 transform -rotate-12" />
+            {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent to-transparent via-sky-500 transform -rotate-12" /> */}
             <Image
-              src="/image/placeholder.svg"
+              src="/image/landing/IMG_1167.JPG"
               alt="logo"
               width="400"
               height="40"
-              className="absolute object-cover"
+              className="absolute object-cover w-full hover:opacity-70"
             />
             <CardContent className="p-6 relative">
-              <h2 className="text-xl text-center font-bold mb-2">活動内容</h2>
-              <p className="text-gray-600 text-center">activities</p>
-              {/* <Button className="mt-4">Learn More</Button> */}
+              <div className="bg-white/60 pt-2 rounded-lg">
+                <h2 className="text-xl text-center font-bold mb-2">活動内容</h2>
+                <p className="text-gray-600 text-center">activities</p>
+                {/* <Button className="mt-4">Learn More</Button> */}
+              </div>
             </CardContent>
           </Card>
         </Link>

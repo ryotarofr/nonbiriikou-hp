@@ -49,6 +49,8 @@ export const Header = ({ items, children }: MainNavProps) => {
         <Link className="flex items-center justify-center" href="/">
           <Image src="/logo.svg" alt="logo" width="150" height="40" />
           <span className="sr-only">のんびりいこう</span>
+          <Image src="/tito-group-logo.svg" alt="logo" width="150" height="40" className="w-[80px] h-[30px]" />
+          <Image src="/tito-group-name.svg" alt="logo" width="150" height="40" className="w-[140px] h-[80px]" />
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="/company">

@@ -44,10 +44,61 @@ function CarouselDemo() {
     updateCurrent()
   }
 
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    // ウィンドウのリサイズ時に幅を更新するためのイベントリスナーを追加
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // コンポーネントがマウントされたときにイベントリスナーを追加
+    window.addEventListener('resize', handleResize);
+
+    // コンポーネントがアンマウントされたときにイベントリスナーを削除
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // 空の依存配列は、コンポーネントがマウントされたときに一度だけ実行されるようにします
+
   return (
     <div>
       <div className='text-2xl font-bold tracking-tighter sm:text-3xl text-center mt-10'>社員紹介</div>
       <div className="p-6 space-y-8 container max-w-3xl lg:max-w-5xl mx-auto">
+        <div>{windowWidth <= 768 ?
+          <>
+            {/* 下のドット */}
+            <div className=" justify-center  gap-3 hidden">
+              {members.map((slide, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleThumbClick(index)}
+                  className={`w-3 h-3 rounded-full ${index === selectedIndex ? 'bg-gray-500' : 'bg-gray-300'}`}
+                ></button>
+              ))}
+            </div>
+
+            {/* プレビューのスライダー */}
+            <div className="overflow-hidden" ref={emblaThumbsRef}>
+              <div className="flex  gap-3">
+                {members.map((thumb, index) => (
+                  <button key={index} onClick={() => handleThumbClick(index)} className="flex-[0_0_20%]">
+                    <div
+                      className="aspect-video w-full flex items-center justify-center text-xl font-bold"
+                      style={{
+                        opacity: index === selectedIndex ? 1 : 0.6,
+                      }}
+                    >
+                      <Image src={thumb.avator} alt="thumbnail" width="60" height="60" className="rounded-lg" />
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </>
+          :
+          null
+        }</div>
         <div className="relative">
           <div className=' hidden sm:block'>
             <button
@@ -102,34 +153,40 @@ function CarouselDemo() {
           </div>
         </div>
 
-        {/* 下のドット */}
-        <div className="flex justify-center  gap-3">
-          {members.map((slide, index) => (
-            <button
-              key={index}
-              onClick={() => handleThumbClick(index)}
-              className={`w-3 h-3 rounded-full ${index === selectedIndex ? 'bg-gray-500' : 'bg-gray-300'}`}
-            ></button>
-          ))}
-        </div>
+        <div>{windowWidth >= 768 ?
+          <>
+            {/* 下のドット */}
+            <div className="flex justify-center  gap-3">
+              {members.map((slide, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleThumbClick(index)}
+                  className={`w-3 h-3 rounded-full ${index === selectedIndex ? 'bg-gray-500' : 'bg-gray-300'}`}
+                ></button>
+              ))}
+            </div>
 
-        {/* プレビューのスライダー */}
-        <div className="overflow-hidden" ref={emblaThumbsRef}>
-          <div className="flex  gap-3">
-            {members.map((thumb, index) => (
-              <button key={index} onClick={() => handleThumbClick(index)} className="flex-[0_0_20%]">
-                <div
-                  className="aspect-video w-full flex items-center justify-center text-xl font-bold"
-                  style={{
-                    opacity: index === selectedIndex ? 1 : 0.6,
-                  }}
-                >
-                  <Image src={thumb.avator} alt="thumbnail" width="60" height="60" className="rounded-lg" />
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
+            {/* プレビューのスライダー */}
+            <div className="overflow-hidden" ref={emblaThumbsRef}>
+              <div className="flex  gap-3">
+                {members.map((thumb, index) => (
+                  <button key={index} onClick={() => handleThumbClick(index)} className="flex-[0_0_20%]">
+                    <div
+                      className="aspect-video w-full flex items-center justify-center text-xl font-bold"
+                      style={{
+                        opacity: index === selectedIndex ? 1 : 0.6,
+                      }}
+                    >
+                      <Image src={thumb.avator} alt="thumbnail" width="60" height="60" className="rounded-lg" />
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </>
+          :
+          null
+        }</div>
       </div>
     </div>
   )
@@ -157,7 +214,7 @@ const members = [
   },
   {
     desc: <Member5 />,
-    avator: "/image/avatars/shadcn.png",
+    avator: "/image/avatars/avatar5.JPG",
   },
 ]
 
@@ -304,7 +361,7 @@ function Member5() {
   return (
     <Card className="flex flex-col items-center p-6 space-y-4">
       <Avatar className="w-24 h-24">
-        <AvatarImage alt="User Name" src="/image/avatars/shadcn.png" />
+        <AvatarImage alt="User Name" src="/image/avatars/avatar5.JPG" />
         <AvatarFallback>UN</AvatarFallback>
       </Avatar>
       <h2 className="text-2xl font-bold">User Name5</h2>

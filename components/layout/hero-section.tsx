@@ -36,6 +36,8 @@ export default function HeroSection() {
       /> */}
       <ImageSlider />
       <div className="absolute inset-0 " />
+      {/* <div className=" absolute text-2xl lg:text-[70px] top-[100px] right-10 text-green-600 font-extrabold">のんびりいこう</div> */}
+      {/* <Image src="/logo.svg" alt="logo" width={600} height={300} className="relative w-[200px] h-[100px] top-[100px] left-1/3" /> */}
       <div className="relative z-10 flex flex-col items-start justify-center h-full px-4 md:px-10 lg:px-20">
         {/* <h1 className="text-3xl md:text-3xl lg:text-5xl text-white font-bold max-w-[600px]">
           就労継続支援B型事業 のんびりいこう

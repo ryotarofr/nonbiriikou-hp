@@ -20,7 +20,7 @@ export function MobileNav({ items, children }: MobileNavProps) {
   return (
     <div
       className={cn(
-        "fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-6 pb-32 shadow-md animate-in slide-in-from-bottom-80 md:hidden"
+        "fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto pb-32 shadow-md animate-in slide-in-from-bottom-80 md:hidden"
       )}
     >
       <div className="relative z-20 grid gap-6 rounded-md bg-white p-4 text-popover-foreground shadow-md">
@@ -29,13 +29,17 @@ export function MobileNav({ items, children }: MobileNavProps) {
         {/* <Icons.logo /> */}
         {/* <span className="font-bold">{siteConfig.name}</span> */}
         {/* </Link> */}
+        {/* <div className="flex justify-center items-center">
+          <Image src="/tito-group-logo.svg" alt="logo" width="150" height="40" className="w-[80px] h-[30px]" />
+          <Image src="/tito-group-name.svg" alt="logo" width="150" height="40" className="w-[140px] h-[80px]" />
+        </div> */}
         <nav className="grid grid-flow-row auto-rows-max text-sm">
           {items.map((item, index) => (
             <Link
               key={index}
               href={item.disabled ? "#" : item.href}
               className={cn(
-                "flex w-full items-center rounded-md p-2 text-sm font-medium hover:border-b-2 hover:border-pink-500",
+                "flex w-full items-center rounded-md p-2 text-sm font-medium border-b hover:border-b-2 hover:border-green-700",
                 item.disabled && "cursor-not-allowed opacity-60"
               )}
             >
