@@ -13,6 +13,7 @@ import { AboutMeSection } from "@/components/layout/about-me-section"
 import Test from "@/components/layout/test"
 import { UsersVoices } from "@/components/layout/users-voices-section"
 import { Faq } from "@/components/layout/faq"
+import MemberMobileSection from "@/components/layout/member-mobile-section"
 
 export default function IndexPage() {
   const [ref, inView] = useInView({
@@ -28,6 +29,23 @@ export default function IndexPage() {
     }
   }, [inView]);
 
+
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    // ウィンドウのリサイズ時に幅を更新するためのイベントリスナーを追加
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // コンポーネントがマウントされたときにイベントリスナーを追加
+    window.addEventListener('resize', handleResize);
+
+    // コンポーネントがアンマウントされたときにイベントリスナーを削除
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // 空の依存配列は、コンポーネントがマウントされたときに一度だけ実行されるようにします
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -80,7 +98,13 @@ export default function IndexPage() {
           <UsersVoices />
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 border-b">
-          <MemberSection />
+          {windowWidth >= 768 ?
+            <MemberSection />
+            :
+            <MemberMobileSection />
+          }
+
+
         </section>
         {/* <section className="w-full py-12 md:py-24 lg:py-32 border-y">
 

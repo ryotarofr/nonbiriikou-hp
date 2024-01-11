@@ -7,9 +7,9 @@ import Image from 'next/image'
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import { Card } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Car, CarFront, Fish, FlameKindling, Guitar, Shrub } from 'lucide-react'
+import { Car, CarFront, ChevronLeft, ChevronLeftCircle, ChevronRight, ChevronRightCircle, Fish, FlameKindling, Guitar, MousePointerClick, MoveLeft, MoveRight, Shrub } from 'lucide-react'
 
-function CarouselDemo() {
+function MemberMobileSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
 
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
@@ -44,61 +44,43 @@ function CarouselDemo() {
     updateCurrent()
   }
 
-  const [windowWidth, setWindowWidth] = useState(0);
-
-  useEffect(() => {
-    // ウィンドウのリサイズ時に幅を更新するためのイベントリスナーを追加
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    // コンポーネントがマウントされたときにイベントリスナーを追加
-    window.addEventListener('resize', handleResize);
-
-    // コンポーネントがアンマウントされたときにイベントリスナーを削除
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []); // 空の依存配列は、コンポーネントがマウントされたときに一度だけ実行されるようにします
-
   return (
     <div>
-      <div className='text-2xl font-bold tracking-tighter sm:text-3xl text-center mt-10'>社員紹介</div>
-      <div className="p-6 space-y-8 container max-w-3xl lg:max-w-5xl mx-auto">
-        <div>{windowWidth <= 768 ?
-          <>
-            {/* 下のドット */}
-            <div className=" justify-center  gap-3 hidden">
-              {members.map((slide, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleThumbClick(index)}
-                  className={`w-3 h-3 rounded-full ${index === selectedIndex ? 'bg-gray-500' : 'bg-gray-300'}`}
-                ></button>
+      <div className='text-2xl font-bold tracking-tighter sm:text-3xl text-center mt-10 mb-6'>社員紹介</div>
+      <div className="space-y-8 container max-w-3xl lg:max-w-5xl mx-auto">
+        <div>
+
+          {/* 下のドット */}
+          <div className=" justify-center  gap-3 hidden">
+            {members.map((slide, index) => (
+              <button
+                key={index}
+                onClick={() => handleThumbClick(index)}
+                className={`w-3 h-3 rounded-full ${index === selectedIndex ? 'bg-gray-500' : 'bg-gray-300'}`}
+              ></button>
+            ))}
+          </div>
+
+          {/* プレビューのスライダー */}
+          <div className="overflow-hidden" ref={emblaThumbsRef}>
+            <div className="flex  gap-3">
+              {members.map((thumb, index) => (
+                <button key={index} onClick={() => handleThumbClick(index)} className="flex-[0_0_20%]">
+                  <div
+                    className="aspect-video w-full flex items-center justify-center text-xl font-bold"
+                    style={{
+                      opacity: index === selectedIndex ? 1 : 0.6,
+                    }}
+                  >
+                    <Image src={thumb.avator} alt="thumbnail" width="60" height="60" className="rounded-lg" />
+                  </div>
+                </button>
               ))}
             </div>
+          </div>
 
-            {/* プレビューのスライダー */}
-            <div className="overflow-hidden" ref={emblaThumbsRef}>
-              <div className="flex  gap-3">
-                {members.map((thumb, index) => (
-                  <button key={index} onClick={() => handleThumbClick(index)} className="flex-[0_0_20%]">
-                    <div
-                      className="aspect-video w-full flex items-center justify-center text-xl font-bold"
-                      style={{
-                        opacity: index === selectedIndex ? 1 : 0.6,
-                      }}
-                    >
-                      <Image src={thumb.avator} alt="thumbnail" width="60" height="60" className="rounded-lg" />
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-          </>
-          :
-          null
-        }</div>
+
+        </div>
         <div className="relative">
           <div className=' hidden sm:block'>
             <button
@@ -153,46 +135,13 @@ function CarouselDemo() {
           </div>
         </div>
 
-        <div>{windowWidth >= 768 ?
-          <>
-            {/* 下のドット */}
-            <div className="flex justify-center  gap-3">
-              {members.map((slide, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleThumbClick(index)}
-                  className={`w-3 h-3 rounded-full ${index === selectedIndex ? 'bg-gray-500' : 'bg-gray-300'}`}
-                ></button>
-              ))}
-            </div>
 
-            {/* プレビューのスライダー */}
-            <div className="overflow-hidden" ref={emblaThumbsRef}>
-              <div className="flex  gap-3">
-                {members.map((thumb, index) => (
-                  <button key={index} onClick={() => handleThumbClick(index)} className="flex-[0_0_20%]">
-                    <div
-                      className="aspect-video w-full flex items-center justify-center text-xl font-bold"
-                      style={{
-                        opacity: index === selectedIndex ? 1 : 0.6,
-                      }}
-                    >
-                      <Image src={thumb.avator} alt="thumbnail" width="60" height="60" className="rounded-lg" />
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-          </>
-          :
-          null
-        }</div>
       </div>
     </div>
   )
 }
 
-export default CarouselDemo
+export default MemberMobileSection
 
 
 const members = [
@@ -234,49 +183,90 @@ const slides = [
 ]
 
 function Member1() {
+  const [dropdown, setDropdown] = useState(0)
+  const [toggleImage, setToggleImage] = useState(true)
+
   return (
-    <Card className="items-center p-3 overflow-hidden">
-      <Tabs defaultValue="heart" className="mx-auto">
+    <div className="items-center px-6 pb-6 overflow-hidden ">
+      <div className="mx-auto">
+
         <div className='flex flex-col items-center p-6 space-y-4'>
-          <Avatar className="w-36 h-36">
-            <AvatarImage alt="User Name" src="/image/avatars/avatar1.JPG" />
-            <AvatarFallback>UN</AvatarFallback>
-          </Avatar>
+          {toggleImage ?
+            <div onClick={() => setToggleImage(prev => !prev)}>
+              <MousePointerClick className='' />
+              <Avatar className="w-36 h-36">
+                <AvatarImage alt="User Name" src="/image/avatars/avatar1.JPG" />
+                <AvatarFallback>UN</AvatarFallback>
+              </Avatar>
+            </div>
+            :
+            <div onClick={() => setToggleImage(prev => !prev)}>
+              <MousePointerClick />
+
+              <Image src="/image/avatars/avatar1-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
+            </div>
+          }
 
           <h2 className="text-2xl font-bold">伊藤 卓芳</h2>
         </div>
-        <TabsList className='text-gray-500 flex justify-start md:justify-center overflow-scroll'>
-          <TabsTrigger value="heart" className='font-bold'>この仕事に対する思い</TabsTrigger>
-          <TabsTrigger value="message" className='font-bold'>これから利用いただく方へのメッセージ</TabsTrigger>
-          <TabsTrigger value="hobby" className='font-bold'>趣味・好きなこと</TabsTrigger>
-        </TabsList>
-        <TabsContent value="heart" className=' p-3'>
-          『人生一回ポッキリ・・・』どのような働き方をしても、どのように日々を過ごしても、同じように時間は過ぎていきます。
-          であるならば、自分たちが考えを具体化できるような、どこにもない『心ある楽しい福祉サービス』を追求し、サービスを受けて
-          いただく利用者様(ご家族)、サービスを提供する職員、共に楽しく成長し幸せになれるような会社にしたいと心から思います。
-        </TabsContent>
-        <TabsContent value="message" className=' p-3'>
-          仕事(作業)や活動、イベント、日常のコミュニケーションなどをと通して『自分らしさ』を発見していただき、自分の夢や目標
-          に希望が持てるように・・・！そして、そのきっかけづくりが&quot;のんびりいこう&quot;でできるといいな・・・と思っています！他の人
-          と比較することなく、自分のペースで&quot;のんびり&quot;と・・・。素敵な自分発見を我々と一緒に倒しみましょう！！
-        </TabsContent>
-        <TabsContent value="hobby" className='pl-4 sm:pl-10 md:pl-20'>
-          <ul className='mx-6 grid grid-cols-2 md:grid-cols-3 h-[160px] items-center'>
-            <li className='flex space-x-2 items-center'><FlameKindling /><p>キャンプ</p></li>
-            <li className='flex space-x-2 items-center'><Fish /><p>魚釣り</p></li>
-            <li className='flex space-x-2 items-center'><Guitar /><p>楽器演奏(ベースギター)</p></li>
-            <li className='flex space-x-2 items-center'><Car /><p>ドライブ</p></li>
-            <li className='flex space-x-2 items-center'><CarFront /><p>車いじり</p></li>
-          </ul>
-        </TabsContent>
-      </Tabs>
+
+        <div className=' text-center'>
+          {dropdown === 0 && <><div className='font-bold text-gray-800 underline underline-offset-2'>この仕事に対する思い</div></>}
+          {dropdown === 1 && <><div className='font-bold text-gray-800 underline underline-offset-2'>これから利用いただく方へのメッセージ</div></>}
+          {dropdown === 2 && <><div className='font-bold text-gray-800 underline underline-offset-2'>趣味・好きなこと</div></>}
+        </div>
 
 
-      {/* <p className="text-center text-gray-500 dark:text-gray-400">
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-      </p> */}
-    </Card>
+        {dropdown === 0 &&
+          <div className=' p-3'>
+            『人生一回ポッキリ・・・』どのような働き方をしても、どのように日々を過ごしても、同じように時間は過ぎていきます。
+            であるならば、自分たちが考えを具体化できるような、どこにもない『心ある楽しい福祉サービス』を追求し、サービスを受けて
+            いただく利用者様(ご家族)、サービスを提供する職員、共に楽しく成長し幸せになれるような会社にしたいと心から思います。
+          </div>
+        }
+        {dropdown === 1 &&
+          <div className=' p-3'>
+            仕事(作業)や活動、イベント、日常のコミュニケーションなどをと通して『自分らしさ』を発見していただき、自分の夢や目標
+            に希望が持てるように・・・！そして、そのきっかけづくりが&quot;のんびりいこう&quot;でできるといいな・・・と思っています！他の人
+            と比較することなく、自分のペースで&quot;のんびり&quot;と・・・。素敵な自分発見を我々と一緒に倒しみましょう！！
+          </div>
+        }
+        {dropdown === 2 &&
+          <div className='pl-4 sm:pl-10 md:pl-20'>
+            <ul className='mx-6 grid grid-cols-2 md:grid-cols-3 h-[160px] items-center'>
+              <li className='flex space-x-2 items-center'><FlameKindling /><p>キャンプ</p></li>
+              <li className='flex space-x-2 items-center'><Fish /><p>魚釣り</p></li>
+              <li className='flex space-x-2 items-center'><Guitar /><p>楽器演奏(ベースギター)</p></li>
+              <li className='flex space-x-2 items-center'><Car /><p>ドライブ</p></li>
+              <li className='flex space-x-2 items-center'><CarFront /><p>車いじり</p></li>
+            </ul>
+          </div>
+        }
+        <div className='flex justify-around text-gray-600'>
+          <div
+            className={`${dropdown === 0 && "hidden"} rounded-md flex items-center`}
+            onClick={() => setDropdown(dropdown - 1)}
+          >
+            <ChevronLeft
+              size={36}
+              color='gray'
+            />
+            <p>もどる</p>
+          </div>
+          <div
+            className={`${dropdown === 2 && "hidden"} rounded-md flex items-center`}
+            onClick={() => setDropdown(dropdown + 1)}
+          >
+            <p>すすむ</p>
+            <ChevronRight
+              size={36}
+              color='gray'
+
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
