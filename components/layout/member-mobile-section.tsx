@@ -185,8 +185,8 @@ function Member1() {
             <div onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick className='' />
               <Avatar className="w-36 h-36">
-                <AvatarImage alt="User Name" src="/image/avatars/avatar1.JPG" />
-                <AvatarFallback>UN</AvatarFallback>
+                <AvatarImage alt="伊藤 卓芳" src="/image/avatars/avatar1.JPG" />
+                <AvatarFallback>伊藤 卓芳</AvatarFallback>
               </Avatar>
             </div>
             :
@@ -271,8 +271,8 @@ function Member2() {
             <div onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick className='' />
               <Avatar className="w-36 h-36">
-                <AvatarImage alt="User Name" src="/image/avatars/avatar2.JPG" />
-                <AvatarFallback>UN</AvatarFallback>
+                <AvatarImage alt="今井 洋平" src="/image/avatars/avatar2.JPG" />
+                <AvatarFallback>今井 洋平</AvatarFallback>
               </Avatar>
             </div>
             :
@@ -354,8 +354,8 @@ function Member3() {
             <div onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick className='' />
               <Avatar className="w-36 h-36">
-                <AvatarImage alt="User Name" src="/image/avatars/avatar3.JPG" />
-                <AvatarFallback>UN</AvatarFallback>
+                <AvatarImage alt="山本 和磨" src="/image/avatars/avatar3.JPG" />
+                <AvatarFallback>山本 和磨</AvatarFallback>
               </Avatar>
             </div>
             :
@@ -438,8 +438,8 @@ function Member4() {
             <div onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick className='' />
               <Avatar className="w-36 h-36">
-                <AvatarImage alt="User Name" src="/image/avatars/avatar4.JPG" />
-                <AvatarFallback>UN</AvatarFallback>
+                <AvatarImage alt="田邉 真由美" src="/image/avatars/avatar4.JPG" />
+                <AvatarFallback>田邉 真由美</AvatarFallback>
               </Avatar>
             </div>
             :
@@ -520,8 +520,8 @@ function Member5() {
             <div onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick className='' />
               <Avatar className="w-36 h-36">
-                <AvatarImage alt="User Name" src="/image/avatars/avatar5.JPG" />
-                <AvatarFallback>UN</AvatarFallback>
+                <AvatarImage alt="藤井 香織" src="/image/avatars/avatar5.JPG" />
+                <AvatarFallback>藤井 香織</AvatarFallback>
               </Avatar>
             </div>
             :

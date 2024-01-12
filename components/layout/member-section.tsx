@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useCallback, useState } from 'react'
+import { useEffect, useCallback, useState, Suspense } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 
@@ -240,19 +240,23 @@ function Member1() {
       <Tabs defaultValue="heart" className="mx-auto">
         <div className='flex flex-col items-center p-6 space-y-4'>
           {toggleImage ?
-            <div onClick={() => setToggleImage(prev => !prev)}>
+
+            <div className='cursor-pointer' onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick className='' />
               <Avatar className="w-36 h-36">
-                <AvatarImage alt="User Name" src="/image/avatars/avatar1.JPG" />
-                <AvatarFallback>UN</AvatarFallback>
+                <AvatarImage alt="伊藤 卓芳" src="/image/avatars/avatar1.JPG" />
+                <AvatarFallback>伊藤 卓芳</AvatarFallback>
               </Avatar>
             </div>
+
             :
-            <div onClick={() => setToggleImage(prev => !prev)}>
+
+            <div className='cursor-pointer' onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick />
 
               <Image src="/image/avatars/avatar1-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
             </div>
+
           }
           <div className='flex items-end'>
             <p className='text-gray-600 text-lg mr-2'>代表</p>
@@ -298,15 +302,15 @@ function Member2() {
       <Tabs defaultValue="heart" className="mx-auto">
         <div className='flex flex-col items-center p-6 space-y-4'>
           {toggleImage ?
-            <div onClick={() => setToggleImage(prev => !prev)}>
+            <div className='cursor-pointer' onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick className='' />
               <Avatar className="w-36 h-36">
-                <AvatarImage alt="User Name" src="/image/avatars/avatar2.JPG" />
-                <AvatarFallback>UN</AvatarFallback>
+                <AvatarImage alt="今井 洋平" src="/image/avatars/avatar2.JPG" />
+                <AvatarFallback>今井 洋平</AvatarFallback>
               </Avatar>
             </div>
             :
-            <div onClick={() => setToggleImage(prev => !prev)}>
+            <div className='cursor-pointer' onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick />
 
               <Image src="/image/avatars/avatar2-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
@@ -349,15 +353,15 @@ function Member3() {
       <Tabs defaultValue="heart" className="mx-auto">
         <div className='flex flex-col items-center p-6 space-y-4'>
           {toggleImage ?
-            <div onClick={() => setToggleImage(prev => !prev)}>
+            <div className='cursor-pointer' onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick className='' />
               <Avatar className="w-36 h-36">
-                <AvatarImage alt="User Name" src="/image/avatars/avatar3.JPG" />
-                <AvatarFallback>UN</AvatarFallback>
+                <AvatarImage alt="山本 和磨" src="/image/avatars/avatar3.JPG" />
+                <AvatarFallback>山本 和磨</AvatarFallback>
               </Avatar>
             </div>
             :
-            <div onClick={() => setToggleImage(prev => !prev)}>
+            <div className='cursor-pointer' onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick />
 
               <Image src="/image/avatars/avatar3-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
@@ -401,15 +405,15 @@ function Member4() {
       <Tabs defaultValue="heart" className="mx-auto">
         <div className='flex flex-col items-center p-6 space-y-4'>
           {toggleImage ?
-            <div onClick={() => setToggleImage(prev => !prev)}>
+            <div className='cursor-pointer' onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick className='' />
               <Avatar className="w-36 h-36">
-                <AvatarImage alt="User Name" src="/image/avatars/avatar4.JPG" />
-                <AvatarFallback>UN</AvatarFallback>
+                <AvatarImage alt="田邉 真由美" src="/image/avatars/avatar4.JPG" />
+                <AvatarFallback>田邉 真由美</AvatarFallback>
               </Avatar>
             </div>
             :
-            <div onClick={() => setToggleImage(prev => !prev)}>
+            <div className='cursor-pointer' onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick />
 
               <Image src="/image/avatars/avatar4-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
@@ -451,15 +455,15 @@ function Member5() {
       <Tabs defaultValue="heart" className="mx-auto">
         <div className='flex flex-col items-center p-6 space-y-4'>
           {toggleImage ?
-            <div onClick={() => setToggleImage(prev => !prev)}>
+            <div className='cursor-pointer' onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick className='' />
               <Avatar className="w-36 h-36">
-                <AvatarImage alt="User Name" src="/image/avatars/avatar5.JPG" />
-                <AvatarFallback>UN</AvatarFallback>
+                <AvatarImage alt="藤井 香織" src="/image/avatars/avatar5.JPG" />
+                <AvatarFallback>藤井 香織</AvatarFallback>
               </Avatar>
             </div>
             :
-            <div onClick={() => setToggleImage(prev => !prev)}>
+            <div className='cursor-pointer' onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick />
 
               <Image src="/image/avatars/avatar5-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
