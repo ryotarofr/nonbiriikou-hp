@@ -20,7 +20,7 @@ export default function CompanyPage() {
                 <div className=" min-h-[60px] items-center">TEL 083-987-0987 FAX 083-987-1155</div>
                 <div className=" min-h-[60px] items-center">2021年11月1日</div>
                 <div className=" min-h-[60px] items-center">伊藤 卓芳</div>
-                <div className=" min-h-[60px] items-center">山口銀行 山口本店</div>
+                <div className=" min-h-[60px] items-center">山口銀行 山口支店</div>
               </div>
             </div>
           </div>

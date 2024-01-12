@@ -33,10 +33,10 @@ export type SiteConfig = {
   url: string
   ogImage: string
   mailSupport: string
-  links: {
-    twitter: string
-    github: string
-  }
+  // links: {
+  //   twitter: string
+  //   github: string
+  // }
 }
 
 export type DocsConfig = {

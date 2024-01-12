@@ -6,7 +6,6 @@ import Image from 'next/image'
 
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import { Card } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Car, CarFront, ChevronLeft, ChevronLeftCircle, ChevronRight, ChevronRightCircle, Fish, FlameKindling, Guitar, MousePointerClick, Baby, Coffee, CookingPot, Drum, Flower2, Instagram, MessageSquareHeart, MonitorPlay, Plane, Shirt, Shrub, Tractor, Utensils, Wrench } from 'lucide-react'
 
 function MemberMobileSection() {
