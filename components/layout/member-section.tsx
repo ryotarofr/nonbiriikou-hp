@@ -7,9 +7,9 @@ import Image from 'next/image'
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import { Card } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Car, CarFront, Fish, FlameKindling, Guitar, Shrub } from 'lucide-react'
+import { Baby, Car, CarFront, Coffee, CookingPot, Drum, Fish, FlameKindling, Flower2, Guitar, Instagram, MessageSquareHeart, MonitorPlay, MousePointerClick, Plane, Shirt, Shrub, Tractor, Utensils, Wrench } from 'lucide-react'
 
-function CarouselDemo() {
+function MemberSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
 
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
@@ -192,7 +192,7 @@ function CarouselDemo() {
   )
 }
 
-export default CarouselDemo
+export default MemberSection
 
 
 const members = [
@@ -234,16 +234,30 @@ const slides = [
 ]
 
 function Member1() {
+  const [toggleImage, setToggleImage] = useState(true)
   return (
     <Card className="items-center p-3 overflow-hidden">
       <Tabs defaultValue="heart" className="mx-auto">
         <div className='flex flex-col items-center p-6 space-y-4'>
-          <Avatar className="w-36 h-36">
-            <AvatarImage alt="User Name" src="/image/avatars/avatar1.JPG" />
-            <AvatarFallback>UN</AvatarFallback>
-          </Avatar>
+          {toggleImage ?
+            <div onClick={() => setToggleImage(prev => !prev)}>
+              <MousePointerClick className='' />
+              <Avatar className="w-36 h-36">
+                <AvatarImage alt="User Name" src="/image/avatars/avatar1.JPG" />
+                <AvatarFallback>UN</AvatarFallback>
+              </Avatar>
+            </div>
+            :
+            <div onClick={() => setToggleImage(prev => !prev)}>
+              <MousePointerClick />
 
-          <h2 className="text-2xl font-bold">伊藤 卓芳</h2>
+              <Image src="/image/avatars/avatar1-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
+            </div>
+          }
+          <div className='flex items-end'>
+            <p className='text-gray-600 text-lg mr-2'>代表</p>
+            <h2 className="text-2xl font-bold">伊藤 卓芳</h2>
+          </div>
         </div>
         <TabsList className='text-gray-500 flex justify-start md:justify-center overflow-scroll'>
           <TabsTrigger value="heart" className='font-bold'>この仕事に対する思い</TabsTrigger>
@@ -261,7 +275,7 @@ function Member1() {
           と比較することなく、自分のペースで&quot;のんびり&quot;と・・・。素敵な自分発見を我々と一緒に倒しみましょう！！
         </TabsContent>
         <TabsContent value="hobby" className='pl-4 sm:pl-10 md:pl-20'>
-          <ul className='mx-6 grid grid-cols-2 md:grid-cols-3 h-[160px] items-center'>
+          <ul className='mx-6 grid gap-3 grid-cols-2 md:grid-cols-3 items-center'>
             <li className='flex space-x-2 items-center'><FlameKindling /><p>キャンプ</p></li>
             <li className='flex space-x-2 items-center'><Fish /><p>魚釣り</p></li>
             <li className='flex space-x-2 items-center'><Guitar /><p>楽器演奏(ベースギター)</p></li>
@@ -281,16 +295,30 @@ function Member1() {
 }
 
 function Member2() {
+  const [toggleImage, setToggleImage] = useState(true)
   return (
     <Card className="items-center p-6 overflow-hidden">
       <Tabs defaultValue="heart" className="mx-auto">
         <div className='flex flex-col items-center p-6 space-y-4'>
-          <Avatar className="w-36 h-36">
-            <AvatarImage alt="Youhei Imai" src="/image/avatars/avatar2.JPG" />
-            <AvatarFallback>Y.I</AvatarFallback>
-          </Avatar>
+          {toggleImage ?
+            <div onClick={() => setToggleImage(prev => !prev)}>
+              <MousePointerClick className='' />
+              <Avatar className="w-36 h-36">
+                <AvatarImage alt="User Name" src="/image/avatars/avatar2.JPG" />
+                <AvatarFallback>UN</AvatarFallback>
+              </Avatar>
+            </div>
+            :
+            <div onClick={() => setToggleImage(prev => !prev)}>
+              <MousePointerClick />
 
-          <h2 className="text-2xl font-bold">今井 洋平</h2>
+              <Image src="/image/avatars/avatar2-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
+            </div>
+          }
+          <div className='flex items-end'>
+            <p className='text-gray-600 text-lg mr-2'>課長</p>
+            <h2 className="text-2xl font-bold">今井 洋平</h2>
+          </div>
         </div>
         <TabsList className='text-gray-500 flex justify-start md:justify-center overflow-scroll'>
           <TabsTrigger value="heart" className='font-bold'>この仕事に対する思い</TabsTrigger>
@@ -309,67 +337,165 @@ function Member2() {
           ことになった際には、皆さんの好きなことや得意なことをお聞かせください。のんびりいこうでお待ちしています。
         </TabsContent>
         <TabsContent value="hobby" className='ml-4 sm:ml-10 md:ml-20'>
-          <ul className=' list-disc'>
-            <li>旅行</li>
-            <li>魚釣り</li>
-            <li>海鮮系の物を食べること</li>
+          <ul className='mx-6 grid gap-3 grid-cols-2 md:grid-cols-3 items-center'>
+            <li className='flex space-x-2 items-center'><Plane /><p>旅行</p></li>
+            <li className='flex space-x-2 items-center'><Fish /><p>魚釣り</p></li>
+            <li className='flex space-x-2 items-center'><Utensils /><p>海鮮系の物を食べること</p></li>
           </ul>
         </TabsContent>
       </Tabs>
-
-
-      {/* <p className="text-center text-gray-500 dark:text-gray-400">
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-      </p> */}
     </Card>
   )
 }
 function Member3() {
+  const [toggleImage, setToggleImage] = useState(true)
   return (
-    <Card className="flex flex-col items-center p-6 space-y-4">
-      <Avatar className="w-24 h-24">
-        <AvatarImage alt="User Name" src="/image/avatars/avatar3.JPG" />
-        <AvatarFallback>UN</AvatarFallback>
-      </Avatar>
-      <h2 className="text-2xl font-bold">User Name3</h2>
-      <p className="text-center text-gray-500 dark:text-gray-400">
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-      </p>
+    <Card className="items-center p-6 overflow-hidden">
+      <Tabs defaultValue="heart" className="mx-auto">
+        <div className='flex flex-col items-center p-6 space-y-4'>
+          {toggleImage ?
+            <div onClick={() => setToggleImage(prev => !prev)}>
+              <MousePointerClick className='' />
+              <Avatar className="w-36 h-36">
+                <AvatarImage alt="User Name" src="/image/avatars/avatar3.JPG" />
+                <AvatarFallback>UN</AvatarFallback>
+              </Avatar>
+            </div>
+            :
+            <div onClick={() => setToggleImage(prev => !prev)}>
+              <MousePointerClick />
+
+              <Image src="/image/avatars/avatar3-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
+            </div>
+          }
+          <div className='flex items-end'>
+            <p className='text-gray-600 text-lg mr-2'>主任</p>
+            <h2 className="text-2xl font-bold">山本 和磨</h2>
+          </div>
+        </div>
+        <TabsList className='text-gray-500 flex justify-start md:justify-center overflow-scroll'>
+          <TabsTrigger value="heart" className='font-bold'>この仕事に対する思い</TabsTrigger>
+          <TabsTrigger value="message" className='font-bold'>これから利用いただく方へのメッセージ</TabsTrigger>
+          <TabsTrigger value="hobby" className='font-bold'>趣味・好きなこと</TabsTrigger>
+        </TabsList>
+        <TabsContent value="heart" className=''>
+          私は自分に自信が無く上手くいかない事も多々あり、周囲に迷惑をかけてきました。そんな中、色々な人に出会い支えられ今があると思っています。生活する上で悩み苦しむことは誰にでもあります。自分が周囲に支えられているように、自分も同じようにこの仕事を通じて
+          誰かを支えていきたい・・・！ 微力かもしれませんが、誰かの力になれたらと考えています。これからもたくさんの出会いに感謝し、日々精進して参ります。
+        </TabsContent>
+        <TabsContent value="message">
+          就労Bという特性上、働く事は不可欠ですが、働く形は人それぞれだと思います。自分のペースで色々経験し楽しんで仕事をする中で、休まず出勤出来た、◯個製品を仕上げた・・・どんな些細な事でも『出来た！』を積み重ね、今より自分をすごいと思える、笑顔と自信に満ちた未来を一緒に
+          作っていけたら嬉しいです。ここまでご一読いただき感謝申し上げます。『HP見ました』と言って頂くと・・・笑 お会いできるのを心待ちにしております。
+        </TabsContent>
+        <TabsContent value="hobby" className='pl-4 sm:pl-10 md:pl-20'>
+          <ul className='mx-6 grid gap-3 grid-cols-2 md:grid-cols-3 items-center'>
+            <li className='flex space-x-2 items-center'><Wrench /><p>DIY</p></li>
+            <li className='flex space-x-2 items-center'><FlameKindling /><p>キャンプ</p></li>
+            <li className='flex space-x-2 items-center'><Instagram /><p>ガジェット収集</p></li>
+            <li className='flex space-x-2 items-center'><MonitorPlay size={48} /><p>サブカルチャー(ゲーム、漫画、アニメ etc)</p></li>
+            <li className='flex space-x-2 items-center'><Shirt /><p>ファッション</p></li>
+            <li className='flex space-x-2 items-center'><Coffee /><p>カフェ巡り</p></li>
+            <li className='flex space-x-2 items-center'><Baby /><p>息子と遊ぶこと</p></li>
+          </ul>
+        </TabsContent>
+      </Tabs>
     </Card>
   )
 }
 function Member4() {
+  const [toggleImage, setToggleImage] = useState(true)
   return (
-    <Card className="flex flex-col items-center p-6 space-y-4">
-      <Avatar className="w-24 h-24">
-        <AvatarImage alt="User Name" src="/image/avatars/avatar4.JPG" />
-        <AvatarFallback>UN</AvatarFallback>
-      </Avatar>
-      <h2 className="text-2xl font-bold">User Name4</h2>
-      <p className="text-center text-gray-500 dark:text-gray-400">
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-      </p>
+    <Card className="items-center p-6 overflow-hidden">
+      <Tabs defaultValue="heart" className="mx-auto">
+        <div className='flex flex-col items-center p-6 space-y-4'>
+          {toggleImage ?
+            <div onClick={() => setToggleImage(prev => !prev)}>
+              <MousePointerClick className='' />
+              <Avatar className="w-36 h-36">
+                <AvatarImage alt="User Name" src="/image/avatars/avatar4.JPG" />
+                <AvatarFallback>UN</AvatarFallback>
+              </Avatar>
+            </div>
+            :
+            <div onClick={() => setToggleImage(prev => !prev)}>
+              <MousePointerClick />
+
+              <Image src="/image/avatars/avatar4-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
+            </div>
+          }
+          <div className='flex items-end'>
+            <p className='text-gray-600 text-lg mr-2'></p>
+            <h2 className="text-2xl font-bold">田邉 真由美</h2>
+          </div>
+        </div>
+        <TabsList className='text-gray-500 flex justify-start md:justify-center overflow-scroll'>
+          <TabsTrigger value="heart" className='font-bold'>この仕事に対する思い</TabsTrigger>
+          <TabsTrigger value="message" className='font-bold'>これから利用いただく方へのメッセージ</TabsTrigger>
+          <TabsTrigger value="hobby" className='font-bold'>趣味・好きなこと</TabsTrigger>
+        </TabsList>
+        <TabsContent value="heart" className=''>
+          学生時代の私は、福祉で働く自分を想像もしませんでした。初めての就職先はものづくりの会社。その後、自分の体調と相談しながらいくつか職を経験して、たくさんの出逢いの中で現在の仕事と仲間、そして利用者さんたちとのご縁をいただきました。現場では福祉人として至らない自分を痛感させられますが、『働くことは大変だけど楽しい』を皆さんと共有して “人として” の信頼と繋がりを深めていきたいです。ご縁って不思議。
+        </TabsContent>
+        <TabsContent value="message">
+          “のんびりいこう” はいろんなカラーの職員が揃っています。その中でも私はどうやら「ちょっとまじめで厳しい人」という印象を持たれることが多いです(汗)。「優しい私」はまだまだ修行中ですが、私の得意は『困ったことがある⇨じゃあどうする』を考えること。皆さんが少しでも安心して過ごしやすい職場になるように、一緒に環境づくりをいたします。弊社で一緒に、あなたのいろいろな未来を創造（想像）してみませんか？
+        </TabsContent>
+        <TabsContent value="hobby" className='pl-4 sm:pl-10 md:pl-20'>
+          <ul className='mx-6 grid gap-3 grid-cols-2 md:grid-cols-3 items-center'>
+            <li className='flex space-x-2 items-center'><MessageSquareHeart /><p>寝ること</p></li>
+            <li className='flex space-x-2 items-center'><Baby size={48} /><p>子どもたちの寝顔を毎晩写真に撮ること</p></li>
+            <li className='flex space-x-2 items-center'><Drum size={48} /><p>ミュージカル鑑賞(今は行けないけど)</p></li>
+            <li className='flex space-x-2 items-center'><Tractor /><p>梅干しづくり</p></li>
+          </ul>
+        </TabsContent>
+      </Tabs>
     </Card>
   )
 }
-
 
 function Member5() {
+  const [toggleImage, setToggleImage] = useState(true)
   return (
-    <Card className="flex flex-col items-center p-6 space-y-4">
-      <Avatar className="w-24 h-24">
-        <AvatarImage alt="User Name" src="/image/avatars/avatar5.JPG" />
-        <AvatarFallback>UN</AvatarFallback>
-      </Avatar>
-      <h2 className="text-2xl font-bold">User Name5</h2>
-      <p className="text-center text-gray-500 dark:text-gray-400">
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-      </p>
+    <Card className="items-center p-6 overflow-hidden">
+      <Tabs defaultValue="heart" className="mx-auto">
+        <div className='flex flex-col items-center p-6 space-y-4'>
+          {toggleImage ?
+            <div onClick={() => setToggleImage(prev => !prev)}>
+              <MousePointerClick className='' />
+              <Avatar className="w-36 h-36">
+                <AvatarImage alt="User Name" src="/image/avatars/avatar5.JPG" />
+                <AvatarFallback>UN</AvatarFallback>
+              </Avatar>
+            </div>
+            :
+            <div onClick={() => setToggleImage(prev => !prev)}>
+              <MousePointerClick />
+
+              <Image src="/image/avatars/avatar5-2.jpg" alt='' width={400} height={300} className=' rounded-lg' />
+            </div>
+          }
+          <div className='flex items-end'>
+            <p className='text-gray-600 text-lg mr-2'></p>
+            <h2 className="text-2xl font-bold">藤井 香織</h2>
+          </div>
+        </div>
+        <TabsList className='text-gray-500 flex justify-start md:justify-center overflow-scroll'>
+          <TabsTrigger value="heart" className='font-bold'>この仕事に対する思い</TabsTrigger>
+          <TabsTrigger value="message" className='font-bold'>これから利用いただく方へのメッセージ</TabsTrigger>
+          <TabsTrigger value="hobby" className='font-bold'>趣味・好きなこと</TabsTrigger>
+        </TabsList>
+        <TabsContent value="heart" className=''>
+          以前は事務の仕事をしていましたが、ご縁あって福祉の仕事へと転身しました。福祉の仕事はまだまだ経験浅いですが、これまでの人生で学んだことをお伝えし参考にしてほしい、自分らしく過ごし明るく元気に楽しく生活していくお手伝いをしたい、皆さんと共に過ごしお互い色々な事にチャレンジして成長していき「出来た！」という喜びを一緒に感じていきたいという想いで皆さんと頑張っていきたいと思います。
+        </TabsContent>
+        <TabsContent value="message">
+          自然豊かな環境でゆったりと過ごせます。休憩時間は一人でゆっくり過ごす方、スマホをみて過ごす方、職員と話をしたりトランプをして過ごす方など利用者さんも職員も楽しみの笑顔あふれる時間です。
+          焦らずゆっくりのんびりとご自分のペースで過ごしながら、一緒に夢や目標に向かって行けるように心温かな支援をしていきたいと思います。ぜひ見学にいらしてください。
+        </TabsContent>
+        <TabsContent value="hobby" className='ml-4 sm:ml-10 md:ml-20'>
+          <ul className='mx-6 grid gap-3 grid-cols-2 md:grid-cols-3 items-center'>
+            <li className='flex space-x-2 items-center'><Car /><p>ドライブ</p></li>
+            <li className='flex space-x-2 items-center'><Flower2 /><p>花の観賞</p></li>
+          </ul>
+        </TabsContent>
+      </Tabs>
     </Card>
   )
 }
-
