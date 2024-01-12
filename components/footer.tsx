@@ -63,7 +63,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-gray-700 mt-10 pt-10 flex flex-col md:flex-row justify-between items-center">
         <div className="flex space-x-4 mb-4 md:mb-0">
-          <Link className="text-sm hover:underline" href="#">
+          <Link className="text-sm hover:underline" href="/privacy">
             プライバシーポリシー
           </Link>
           {/* <Link className="text-sm hover:underline" href="#">
