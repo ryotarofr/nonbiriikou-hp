@@ -36,7 +36,7 @@ export default function BusinessPage() {
             <h2 className="text-2xl font-bold">のんびりいこう基本理念</h2>
             <div>
               『心から感謝する』『謙虚な気持ちを持つ』『福祉の志と優しさを大切にする』を基本理念として、
-              障がいのある利用者が&quot;昨日より今日&quot; &quot;今日より明日&quot;の成長と希望を感じていただけるように、利用者の想いやりや立場に寄り添い、
+              障がいのある利用者が&quot;昨日より今日&quot; &quot;今日より明日&quot;の成長と希望を感じていただけるように、利用者の想いや立場に寄り添い、
               最善の支援が提供できるように努めていきます。
             </div>
           </div>
@@ -52,18 +52,20 @@ export default function BusinessPage() {
             </div>
           </div>
         </section>
-        <section className="w-full flex justify-center px-6 py-12" id="projects">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-center mb-4 text-2xl font-bold tracking-tighter sm:text-3xl">事業所MAP</h2>
-            <Link
-              href="https://www.google.co.jp/maps/place/%E3%80%92754-0893+%E5%B1%B1%E5%8F%A3%E7%9C%8C%E5%B1%B1%E5%8F%A3%E5%B8%82%E7%A7%8B%E7%A9%82%E4%BA%8C%E5%B3%B6%EF%BC%91%EF%BC%99%EF%BC%91%EF%BC%91/@34.0383223,131.4122046,15.3z/data=!4m6!3m5!1s0x354485c37911ef59:0xd39645131a23a202!8m2!3d34.0389417!4d131.4166068!16s%2Fg%2F11c193m3_1?hl=ja&entry=ttu"
-              className="text-blue-600 text-lg space-x-2 mb-2 flex"
-            >
-              <div>合同会社ティトグループ</div>
-              <ExternalLink />
-            </Link>
-            <Image src="/image/map2.png" alt="map" width={1000} height={500} className="w-[400px] rounded-2xl border shadow-md" />
+        <section className="w-full px-6 py-12" id="projects">
+          <div className="max-w-3xl mx-auto space-y-4">
+            <h2 className="text-2xl font-bold">事業所MAP</h2>
+            <div className="max-w-4xl mx-auto">
+              <Link
+                href="https://www.google.co.jp/maps/place/%E3%80%92754-0893+%E5%B1%B1%E5%8F%A3%E7%9C%8C%E5%B1%B1%E5%8F%A3%E5%B8%82%E7%A7%8B%E7%A9%82%E4%BA%8C%E5%B3%B6%EF%BC%91%EF%BC%99%EF%BC%91%EF%BC%91/@34.0383223,131.4122046,15.3z/data=!4m6!3m5!1s0x354485c37911ef59:0xd39645131a23a202!8m2!3d34.0389417!4d131.4166068!16s%2Fg%2F11c193m3_1?hl=ja&entry=ttu"
+                className="text-blue-600 text-lg space-x-2 mb-2 flex"
+              >
+                <div>合同会社ティトグループ</div>
+                <ExternalLink />
+              </Link>
+              <Image src="/image/map2.png" alt="map" width={1000} height={500} className="w-[400px] rounded-2xl border shadow-md" />
 
+            </div>
           </div>
         </section>
         <section className="px-6 py-12 bg-gray-50" id="about">

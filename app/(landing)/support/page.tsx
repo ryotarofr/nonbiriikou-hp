@@ -1,6 +1,11 @@
+"use client"
+
 import { BasicTable, BasicTable2 } from "@/components/table";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export default function Support() {
+  const [toggle, setToggle] = useState(false)
   return (
     <div className="max-w-6xl mx-auto">
       <div className=" space-y-12 px-4 md:px-6 mb-20">
@@ -36,8 +41,16 @@ export default function Support() {
           <li>③事業所周り、畑の除草作業</li>
           <li>④自分の適性を見るための模擬的な作業訓練プログラム</li>
           <li>⑤グローイングセミナー(土曜日のみ)</li>
-          <span className="text-sm text-gray-600">ビジネスマナー各種・夢を叶えるセミナー・自分も相手も大切にするコミュニケーション
-            ・第一印象セミナー・怒りと上手に向き合うセミナー・プライベートを考えるセミナーなど</span>
+          <span className="text-sm text-gray-600">
+            ビジネスマナーの基本・アンガーマネジメント・アサーション・自己紹介セミナー・褒めるセミナー・仕事の朝を整える・金銭管理セミナー
+            {toggle ?
+              <>
+                ・SNS利用について・品質管理について・みんな違ってみんないい・人から好かれるとは？・目標について・その夢は叶う！・プライベートを充実させよう・利用者さんセミナーなど
+                <Button size="sm" onClick={() => setToggle(prev => !prev)} className="my-2">閉じる</Button>
+              </>
+              :
+              <Button size="sm" onClick={() => setToggle(prev => !prev)} className="my-2">もっと見る</Button>}
+          </span>
         </ul>
 
         <div className="grid grid-cols-1 md:grid-cols-2">

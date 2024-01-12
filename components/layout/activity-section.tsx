@@ -10,7 +10,6 @@ import { Button } from "../ui/button"
 export const ActivitySection = () => {
   const [toggle1, setToggle1] = useState(false)
   const [toggle2, setToggle2] = useState(false)
-  const [toggle3, setToggle3] = useState(false)
   return (
     <div className=" max-w-6xl mx-auto">
       <div className=" space-y-12 px-4 md:px-6">

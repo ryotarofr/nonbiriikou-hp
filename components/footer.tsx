@@ -51,14 +51,12 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-3">事業拠点</h3>
           <p className="text-sm">山口県山口市秋穂二島1911番地</p>
-          <p className="text-sm">TEL 083-087-0987, FAX 083-987-1155</p>
-          <p className="text-sm">info@company.com</p>
+          <p className="text-sm">TEL 083-987-0987, FAX 083-987-1155</p>
         </div>
         <div>
           <h3 className="text-lg font-semibold mb-3">お問い合わせ</h3>
-          {/* <p className="text-sm mb-3">Subscribe to our newsletter for updates and promotions.</p> */}
           <form className="flex space-x-2">
-            <Input className="flex-1" placeholder="Enter your email" type="email" />
+            <Input className="flex-1 text-black" placeholder="Enter your email" type="email" />
             <Button type="submit">次へ</Button>
           </form>
         </div>

@@ -20,7 +20,7 @@ export default function CompanyPage() {
                 <div className=" min-h-[60px] items-center">TEL 083-987-0987 FAX 083-987-1155</div>
                 <div className=" min-h-[60px] items-center">2021年11月1日</div>
                 <div className=" min-h-[60px] items-center">伊藤 卓芳</div>
-                <div className=" min-h-[60px] items-center">山口銀行</div>
+                <div className=" min-h-[60px] items-center">山口銀行 山口本店</div>
               </div>
             </div>
           </div>
@@ -38,11 +38,11 @@ export default function CompanyPage() {
             <ul className=" space-y-4 font-semibold">
               <li>◯ 当たり前のことでも周囲に感謝できる謙虚さを大切にする</li>
               <li>◯ 真面目にコツコツ、正直で透明性のある事業活動を行う</li>
-              <li>◯ 明るく元気で健康に仕事とを楽しむことができる風通しの良い組織と環境を大切にする</li>
-              <li>◯ プロとしての専門知識の蓄積と知識をスキルに変換するためのアウトプットを常に実現する</li>
-              <li>◯ プラスアルファ(ひと手間)を惜しまずに当たり前にできる人材を育てる</li>
+              <li>◯ 明るく元気で健康に仕事を楽しむことができる風通しの良い組織と環境を大切にする</li>
+              <li>◯ プロとしての専門知識の蓄積と知識をスキルに変換するためのアウトプットを常に実践する</li>
+              <li>◯ プラスアルファ(ひと手間)を惜しまず当たり前にできる人材を育てる</li>
               <li>◯ 自然と助け合える優しさと配慮を大切にして強い組織を作る</li>
-              <li>◯ 創造的なアイデアの創出とそれを実現する組織を作る</li>
+              <li>◯ 独創的なアイデアの創出とそれを実現可能にする組織を作る</li>
             </ul>
             {/* <blockquote className="p-4 rounded-md bg-white shadow">
               <p className="text-gray-600">
