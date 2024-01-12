@@ -462,7 +462,7 @@ function Member5() {
             <div onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick />
 
-              <Image src="/image/avatars/avatar5-2.jpg" alt='' width={400} height={300} className=' rounded-lg' />
+              <Image src="/image/avatars/avatar5-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
             </div>
           }
           <div className='flex items-end'>
