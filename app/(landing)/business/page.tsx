@@ -1,4 +1,6 @@
 import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card"
+import { ExternalLink } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 
 export default function BusinessPage() {
@@ -51,11 +53,18 @@ export default function BusinessPage() {
             </div>
           </div>
         </section>
-        <section className="px-6 py-12" id="projects">
-          <div className="max-w-3xl mx-auto space-y-4">
-            <h2 className="text-2xl font-bold">アクセス</h2>
-            {/* ここにgoogle map入れる */}
-            <div>ここにgoogle map入れる</div>
+        <section className="w-full flex justify-center px-6 py-12" id="projects">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-center mb-4 text-2xl font-bold tracking-tighter sm:text-3xl">事業所MAP</h2>
+            <Link
+              href="https://www.google.co.jp/maps/place/%E3%80%92754-0893+%E5%B1%B1%E5%8F%A3%E7%9C%8C%E5%B1%B1%E5%8F%A3%E5%B8%82%E7%A7%8B%E7%A9%82%E4%BA%8C%E5%B3%B6%EF%BC%91%EF%BC%99%EF%BC%91%EF%BC%91/@34.0383223,131.4122046,15.3z/data=!4m6!3m5!1s0x354485c37911ef59:0xd39645131a23a202!8m2!3d34.0389417!4d131.4166068!16s%2Fg%2F11c193m3_1?hl=ja&entry=ttu"
+              className="text-blue-600 text-lg space-x-2 mb-2 flex"
+            >
+              <div>合同会社ティトグループ</div>
+              <ExternalLink />
+            </Link>
+            <Image src="/image/map2.png" alt="map" width={1000} height={500} className="w-[400px] rounded-2xl border shadow-md" />
+
           </div>
         </section>
         <section className="px-6 py-12 bg-gray-50" id="about">
@@ -63,12 +72,12 @@ export default function BusinessPage() {
             <h2 className="text-xl font-bold">のんびりいこう倫理綱領</h2>
             <div className="flex">
               <div>PDF</div>{" "}
-              <Link href="https://drive.google.com/file/d/1uSD3rLFTWGGMBuo5eRpXNd5FYm7Q44En/view?usp=sharing" className=" text-blue-600">のんびりいこう倫理綱領</Link>
+              <Link href="https://drive.google.com/file/d/1OXDeFTJ7kizN6nqBd-T6w5y1RDF9o435/view?usp=sharing" className=" text-blue-600">のんびりいこう倫理綱領</Link>
             </div>
             <h2 className="text-xl font-bold">のんびりいこう職員行動規範</h2>
             <div className="flex">
               <div>PDF</div>{" "}
-              <Link href="/#" className=" text-blue-600">のんびりいこう職員行動規範</Link>
+              <Link href="https://drive.google.com/file/d/1JHvfxWzz0mtx2Z8PUhHpcXdxKheABXZ1/view?usp=sharing" className=" text-blue-600">のんびりいこう職員行動規範</Link>
             </div>
           </div>
         </section>
