@@ -65,9 +65,14 @@ export default function IndexPage() {
             <div className="px-4 md:px-6 space-y-10 xl:space-y-16">
               <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16">
                 <div className="w-full">
-                  <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
-                    就労継続支援B型事業
-                  </h1>
+                  <div className="lg:flex space-x-3 items-end">
+                    <h1 className="lg:leading-tighter text-2xl font-bold tracking-tighter sm:text-3xl md:text-[26px]">
+                      就労継続支援B型事業
+                    </h1>
+                    <div className="text-green-800 lg:leading-tighter text-2xl font-bold tracking-tighter sm:text-3xl  md:text-3xl">
+                      のんびりいこう
+                    </div>
+                  </div>
                   <p className="mx-auto my-6 max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
                     作業や活動を通して、様々な発見や成長を感じていただき、それぞれの夢(小さくても)や目標を一緒に設定していくことで「昨日より今日、
                     今日より明日」のさらなる成長や希望を楽しみながら焦らずに自分のペースで「<span className="text-green-600 font-bold">のんびり</span>」と進んでいくことを支援させていただきます。

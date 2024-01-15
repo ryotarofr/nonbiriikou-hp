@@ -20,7 +20,7 @@ export const UsersVoices = () => {
             {/* <div className="text-2xl md:text-5xl lg:text-6xl">Y&nbsp;. K<span className="text-lg md:text-2xl lg:text-4xl">さん</span></div> */}
           </div>
           <div className="mx-6">
-            この施設は、その日の一人ひとりの体調や状況に合わせて声けけやアドバイスをしてくださり本当にやりやすい環境
+            この施設は、その日の一人ひとりの体調や状況に合わせて声かけやアドバイスをしてくださり本当にやりやすい環境
             だなと感じています。<br />
             あと、自分の将来の夢・希望に対して一緒に親身になって考えてくださいます。<br />
 
