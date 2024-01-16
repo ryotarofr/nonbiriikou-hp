@@ -144,7 +144,7 @@ function MemberSection() {
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {members.map((member, index) => (
-                <div key={index} className="flex-[0_0_100%] md:flex-[0_0_75%] w-full  mx-4">
+                <div key={index} className="flex-[0_0_100%] md:flex-[0_0_90%] w-full  mx-4">
                   {/* <img src={slide.url} alt="sample" className="w-full h-full object-cover rounded-lg" /> */}
                   <div>{member.desc}</div>
                 </div>
