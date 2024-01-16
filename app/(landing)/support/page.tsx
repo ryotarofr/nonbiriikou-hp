@@ -11,7 +11,9 @@ export default function Support() {
       <div className=" space-y-12 px-4 md:px-6 mb-20">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="mt-10">
-            <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">就労継続支援B型事業のご案内</h2>
+            <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">就労継続支援B型事業<span className="mx-1 text-green-800 lg:leading-tighter text-2xl font-bold tracking-tighter sm:text-3xl  md:text-3xl">
+              のんびりいこう
+            </span>のご案内</h2>
           </div>
         </div>
         <div className="text-xl font-bold tracking-tighter sm:text-xl">◯のんびりいこうの支援方針</div>

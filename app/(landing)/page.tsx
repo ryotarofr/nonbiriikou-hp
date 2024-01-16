@@ -64,9 +64,9 @@ export default function IndexPage() {
           <section className="w-full py-12 md:py-24 lg:py-32 border-y">
             <div className="px-4 md:px-6 space-y-10 xl:space-y-16">
               <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16">
-                <div className="w-full">
-                  <div className="lg:flex space-x-3 items-end">
-                    <h1 className="lg:leading-tighter text-2xl font-bold tracking-tighter sm:text-3xl md:text-[26px]">
+                <div className="w-full lg:mt-8">
+                  <div className="lg:flex space-x-3 text-center items-end mb-8">
+                    <h1 className="lg:leading-tightertext-2xl font-bold tracking-tighter text-2xl sm:text-3xl md:text-[26px]">
                       就労継続支援B型事業
                     </h1>
                     <div className="text-green-800 lg:leading-tighter text-2xl font-bold tracking-tighter sm:text-3xl  md:text-3xl">
@@ -79,7 +79,7 @@ export default function IndexPage() {
                     どのような働き方でも「働くことを通じて幸せになる！」を一緒に追求していきましょう！
                   </p>
                   <Link
-                    className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-6 py-4 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                    className="inline-flex h-9 mt-2 items-center justify-center rounded-md bg-gray-900 px-6 py-4 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
                     href="/support"
                   >
                     もっと見る
