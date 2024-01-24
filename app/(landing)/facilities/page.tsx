@@ -13,7 +13,7 @@ export default function FacilitiesPage() {
             <div className='text-center text-xl md:text-2xl lg:text-3xl italic font-semibold border-b mb-2'>
               {facility.facilityName}
             </div>
-            <Image src={facility.facilityImage} alt="sample" width={2000} height={1500} className="w-full h-full object-cover rounded-lg" />
+            <img src={facility.facilityImage} alt="sample" className="w-full h-full object-cover rounded-lg" />
           </div>
         ))}
       </div>

@@ -1,12 +1,5 @@
-import * as React from "react"
 import Link from "next/link"
-
-
-import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { useLockBody } from "@/hooks/use-lock-body"
-import { Icons } from "@/components/shared/icons"
-import Image from "next/image"
 import { MainNavItem } from "@/types"
 
 interface MobileNavProps {
@@ -15,7 +8,6 @@ interface MobileNavProps {
 }
 
 export function MobileNav({ items, children }: MobileNavProps) {
-  // useLockBody()
 
   return (
     <div
@@ -24,15 +16,6 @@ export function MobileNav({ items, children }: MobileNavProps) {
       )}
     >
       <div className="relative z-20 grid gap-6 rounded-md bg-white p-4 text-popover-foreground shadow-md">
-        {/* <Link href="/" className="flex items-center space-x-2"> */}
-        {/* <Image src="/images/logo.png" alt="logo" width={30} height={30} /> */}
-        {/* <Icons.logo /> */}
-        {/* <span className="font-bold">{siteConfig.name}</span> */}
-        {/* </Link> */}
-        {/* <div className="flex justify-center items-center">
-          <Image src="/tito-group-logo.svg" alt="logo" width="150" height="40" className="w-[80px] h-[30px]" />
-          <Image src="/tito-group-name.svg" alt="logo" width="150" height="40" className="w-[140px] h-[80px]" />
-        </div> */}
         <nav className="grid grid-flow-row auto-rows-max text-sm">
           {items.map((item, index) => (
             <Link

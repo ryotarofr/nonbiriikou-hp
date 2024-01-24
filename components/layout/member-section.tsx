@@ -89,7 +89,7 @@ function MemberSection() {
                         opacity: index === selectedIndex ? 1 : 0.6,
                       }}
                     >
-                      <Image src={thumb.avator} alt="thumbnail" width="60" height="60" className="rounded-lg" />
+                      <img src={thumb.avator} alt="thumbnail" className="max-w-[60px] rounded-lg" />
                     </div>
                   </button>
                 ))}
@@ -177,7 +177,7 @@ function MemberSection() {
                         opacity: index === selectedIndex ? 1 : 0.6,
                       }}
                     >
-                      <Image src={thumb.avator} alt="thumbnail" width="60" height="60" className="rounded-lg" />
+                      <img src={thumb.avator} alt="thumbnail" className="max-w-[60px] rounded-lg" />
                     </div>
                   </button>
                 ))}
@@ -218,20 +218,6 @@ const members = [
   },
 ]
 
-const slides = [
-  {
-    url: '/image/77940-1.jpg',
-  },
-  {
-    url: '/image/77931.jpg',
-  },
-  {
-    url: '/image/4913959475038897143.99396958218ba7a03177a3fe4a737ae1.23080911.jpeg',
-  },
-  {
-    url: '/image/IMG_4712-1.jpg',
-  },
-]
 
 function Member1() {
   const [toggleImage, setToggleImage] = useState(true)
@@ -254,7 +240,7 @@ function Member1() {
             <div className='cursor-pointer' onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick />
 
-              <Image src="/image/avatars/avatar1-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
+              <img src="/image/avatars/avatar1-2.JPG" alt='' className='rounded-lg max-w-[400px]' />
             </div>
 
           }
@@ -313,7 +299,7 @@ function Member2() {
             <div className='cursor-pointer' onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick />
 
-              <Image src="/image/avatars/avatar2-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
+              <img src="/image/avatars/avatar2-2.JPG" alt='' className='rounded-lg max-w-[400px]' />
             </div>
           }
           <div className='flex items-end'>
@@ -364,7 +350,7 @@ function Member3() {
             <div className='cursor-pointer' onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick />
 
-              <Image src="/image/avatars/avatar3-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
+              <img src="/image/avatars/avatar3-2.JPG" alt='' className='rounded-lg max-w-[400px]' />
             </div>
           }
           <div className='flex items-end'>
@@ -416,7 +402,7 @@ function Member4() {
             <div className='cursor-pointer' onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick />
 
-              <Image src="/image/avatars/avatar4-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
+              <img src="/image/avatars/avatar4-2.JPG" alt='' className='rounded-lg max-w-[400px]' />
             </div>
           }
           <div className='flex items-end'>
@@ -466,7 +452,7 @@ function Member5() {
             <div className='cursor-pointer' onClick={() => setToggleImage(prev => !prev)}>
               <MousePointerClick />
 
-              <Image src="/image/avatars/avatar5-2.JPG" alt='' width={400} height={300} className=' rounded-lg' />
+              <img src="/image/avatars/avatar5-2.JPG" alt='' className='rounded-lg max-w-[400px]' />
             </div>
           }
           <div className='flex items-end'>

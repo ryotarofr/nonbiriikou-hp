@@ -63,7 +63,7 @@ export default function BusinessPage() {
                 <div>合同会社ティトグループ</div>
                 <ExternalLink />
               </Link>
-              <Image src="/image/map2.png" alt="map" width={1000} height={500} className="w-[400px] rounded-2xl border shadow-md" />
+              <img src="/image/map2.png" alt="map" className="w-[400px] rounded-2xl border shadow-md" />
 
             </div>
           </div>

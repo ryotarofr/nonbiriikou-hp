@@ -14,7 +14,8 @@ const nextConfig = {
       },
     ],
   },
-  output: "export",
+  //これエラーになるからexport する時だけ有効に
+  // output: "export",
 };
 
 module.exports = nextConfig;

@@ -83,7 +83,7 @@ export const WorkMenu = () => {
           >
             計算</li>
         </ul>
-        <Image src="/image/landing/work-sample.JPG" alt="workImage" width={400} height={200} className="rounded-lg hidden md:block" />
+        <img src="/image/landing/work-sample.JPG" alt="workImage" className="max-w-[240px] rounded-lg hidden lg:block" />
       </div>
     </div>
   )

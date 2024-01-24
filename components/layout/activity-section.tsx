@@ -30,12 +30,11 @@ export const ActivitySection = () => {
         </div>
         <div className="mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
           <div className="grid gap-1">
-            <Image
+            <img
               alt="Activity Image"
-              className="aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
-              height="300"
+              className="w-full aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
               src="/image/landing/IMG_2143.JPG"
-              width="400"
+
             />
             <h3 className="text-lg font-bold">車部品の加工作業</h3>
             {/* <p className="text-sm text-gray-500 dark:text-gray-400">This is a brief description of the activity.</p>
@@ -47,12 +46,10 @@ export const ActivitySection = () => {
             </Link> */}
           </div>
           <div className="grid gap-1">
-            <Image
+            <img
               alt="Activity Image"
-              className="aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
-              height="300"
+              className="w-full aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
               src="/image/landing/IMG_2159.JPG"
-              width="400"
             />
             <h3 className="text-[16px] font-bold">封入、封かん作業等 / 臨時請負内職作業</h3>
             {/* <p className="text-sm text-gray-500 dark:text-gray-400">This is a brief description of the activity.</p>
@@ -64,12 +61,10 @@ export const ActivitySection = () => {
             </Link> */}
           </div>
           <div className="grid gap-1">
-            <Image
+            <img
               alt="Activity Image"
-              className="aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
-              height="300"
+              className="w-full aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
               src="/image/landing/IMG_2151.JPG"
-              width="400"
             />
             <h3 className="text-lg font-bold">段ボール資材料等の加工作業</h3>
             {/* <p className="text-sm text-gray-500 dark:text-gray-400">This is a brief description of the activity.</p>
@@ -89,12 +84,10 @@ export const ActivitySection = () => {
         </div>
         <div className="mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
           <div className="grid gap-1">
-            <Image
+            <img
               alt="Activity Image"
-              className="aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
-              height="300"
+              className="w-full aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
               src="/image/landing/washing-a.JPG"
-              width="400"
             />
             <h3 className="text-lg font-bold">建物内清掃作業A社[月・木曜日]</h3>
             {/* <p className="text-sm text-gray-500 dark:text-gray-400">This is a brief description of the activity.</p>
@@ -106,12 +99,10 @@ export const ActivitySection = () => {
             </Link> */}
           </div>
           <div className="grid gap-1">
-            <Image
+            <img
               alt="Activity Image"
-              className="aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
-              height="300"
+              className="w-full aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
               src="/image/landing/washing-b.JPG"
-              width="400"
             />
             <h3 className="text-lg font-bold">建物内清掃作業B社[金曜日]</h3>
             {/* <p className="text-sm text-gray-500 dark:text-gray-400">This is a brief description of the activity.</p>
@@ -123,12 +114,10 @@ export const ActivitySection = () => {
             </Link> */}
           </div>
           <div className="grid gap-1">
-            <Image
+            <img
               alt="Activity Image"
-              className="aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
-              height="300"
+              className="w-full aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
               src="/image/landing/grow-delete.JPG"
-              width="400"
             />
             <h3 className="text-lg font-bold">管理畑の除草作業</h3>
             {/* <p className="text-sm text-gray-500 dark:text-gray-400">This is a brief description of the activity.</p>

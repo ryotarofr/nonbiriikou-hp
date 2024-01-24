@@ -1,48 +1,12 @@
-"use client"
-
-import Image from "next/image";
 import Link from "next/link"
-import React, { useState, useEffect, useRef } from 'react';
-import { Button } from "../ui/button";
-
-
-const ImageSlider = () => {
-  const images = ['/image/landing/landing1.JPG', '/image/landing/landing2.JPG', '/image/landing/landing3.JPG'];
-  const [currentImage, setCurrentImage] = useState(0);
-
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-  //   }, 5000);
-
-  //   return () => clearInterval(intervalId); // コンポーネントがアンマウントされたときにクリアする
-  // }, []);
-
-  return <Image src={images[currentImage]} alt="Slider" width={2000} height={1800} className="absolute inset-0 object-cover w-full h-full" />;
-};
 
 export default function HeroSection() {
   return (
     <section className="relative w-full h-[500px] md:h-[700px] lg:h-[800px]">
-      {/* <img
-        alt="Person using HP device"
-        className="absolute inset-0 object-cover w-full h-full"
-        height="1800"
-        src="/image/landing/landing1.JPG"
-        // style={{
-        //   aspectRatio: "1920/800",
-        //   objectFit: "cover",
-        // }}
-        width="3000"
-      /> */}
-      <ImageSlider />
+
+      <img src='/image/landing/landing1.JPG' alt="Slider" className="absolute inset-0 object-cover w-full h-full" />;
       <div className="absolute inset-0 " />
-      {/* <div className=" absolute text-2xl lg:text-[70px] top-[100px] right-10 text-green-600 font-extrabold">のんびりいこう</div> */}
-      {/* <Image src="/logo.svg" alt="logo" width={600} height={300} className="relative w-[200px] h-[100px] top-[100px] left-1/3" /> */}
       <div className="relative z-10 flex flex-col items-start justify-center h-full px-4 md:px-10 lg:px-20">
-        {/* <h1 className="text-3xl md:text-3xl lg:text-5xl text-white font-bold max-w-[600px]">
-          就労継続支援B型事業 のんびりいこう
-        </h1> */}
         <p className="mt-4 text-lg md:text-3xl text-white max-w-[500px]">
           自分のペースで「のんびり」と・・・。
         </p>

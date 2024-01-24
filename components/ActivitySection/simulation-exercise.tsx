@@ -78,7 +78,7 @@ export const SimulationExercise = () => {
             ボタン選び作業訓練
           </li>
         </ul>
-        <Image src="/image/landing/simulation-Training.JPG" alt="workImage" width={400} height={200} className="rounded-lg hidden md:block" />
+        <img src="/image/landing/simulation-Training.JPG" alt="workImage" className="max-w-[240px]  rounded-lg hidden lg:block" />
       </div>
     </div>
   )

@@ -1,22 +1,16 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
-import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card"
 import HeroSection from "@/components/layout/hero-section"
-import MemberSection from "@/components/layout/member-section"
 import { useEffect, useState } from "react"
 import { useInView } from 'react-intersection-observer';
 import "./style.css"
 import { ActivitySection } from "@/components/layout/activity-section"
 import { AboutMeSection } from "@/components/layout/about-me-section"
-import Test from "@/components/layout/test"
 import { UsersVoices } from "@/components/layout/users-voices-section"
 import { Faq } from "@/components/layout/faq"
-import MemberMobileSection from "@/components/layout/member-mobile-section"
 import { MemberFetch } from "@/components/layout/member-fetch"
 import { ExternalLink } from "lucide-react"
-import { Skeleton } from "@/components/ui/skeleton"
 import LoadingAnimation from "@/components/loading-animation"
 
 export default function IndexPage() {
@@ -49,12 +43,7 @@ export default function IndexPage() {
         </div>
 
         :
-
-
         <main className="flex-1">
-          {/* <section className="h-[90vh]"> */}
-          {/* <Test /> */}
-          {/* </section> */}
           <section>
             <HeroSection />
           </section>
@@ -86,14 +75,7 @@ export default function IndexPage() {
                   </Link>
                 </div>
                 <div>
-                  <Image src="/image/image1.jpg" alt="1" width="1000" height="800" className=" rounded-lg" />
-                  {/* <img
-                  alt="Hero"
-                  className="mx-auto aspect-[1/1] overflow-hidden rounded-xl object-cover"
-                  height="500"
-                  src="/placeholder.svg"
-                  width="500"
-                /> */}
+                  <img src="/image/image1.jpg" alt="1" className="w-full lg:max-w-[1000px] rounded-lg" />
                 </div>
               </div>
             </div>
@@ -106,8 +88,6 @@ export default function IndexPage() {
           </section>
           <section className="w-full py-12 md:py-24 lg:py-32 border-b">
             <MemberFetch />
-            {/* <MemberSection /> */}
-
 
           </section>
           <section className="w-full py-12 md:py-24 lg:py-32 border-b">
@@ -120,18 +100,12 @@ export default function IndexPage() {
                 <div>合同会社ティトグループ</div>
                 <ExternalLink />
               </Link>
-              <Image src="/image/map2.png" alt="map" width={1920} height={1080} className="rounded-2xl border shadow-md" />
+              <img src="/image/map2.png" alt="map" className="w-full lg:max-w-[1920] rounded-2xl border shadow-md" />
 
             </div>
           </section>
-          {/* <section className="w-full py-12 md:py-24 lg:py-32 border-y">
-
-          <div className="text-center">google map ここに表示</div>
-        </section> */}
           <section className="w-full py-12 md:py-24 lg:pb-20 px-3">
-            {/* <div className="flex w-full flex-col gap-16 py-8 md:py-8"> */}
             <Faq />
-            {/* </div> */}
           </section>
         </main>
       }
